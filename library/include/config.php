@@ -7,7 +7,7 @@
 # All custom settings should be entered in this file.
 # Options may be copied from config.default.php and configured here.
 
-require_once('/../../pedadida-config.php');
+require_once(__DIR__.'/../../pedadida-config.php');
 
 # MySQL database settings 
 $mysql_server = $pedadida_database_host;

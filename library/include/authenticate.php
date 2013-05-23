@@ -18,7 +18,7 @@ $third_party = 1;
 $my_user_id = 0;
 
 define('WP_USE_THEMES', false);
-require_once('/../../wp-blog-header.php');
+require_once(__DIR__.'/../../wp-blog-header.php');
 
 $current_user = wp_get_current_user(); 
 
