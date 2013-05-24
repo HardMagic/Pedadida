@@ -3,7 +3,7 @@
 unset($CFG);
 global $CFG;
 $CFG = new stdClass();
-require_once('/../pedadida-config.php');
+require_once(__DIR__.'/../pedadida-config.php');
 
 $CFG->dbtype    = $pedidada_database_type;
 $CFG->dblibrary = 'native';

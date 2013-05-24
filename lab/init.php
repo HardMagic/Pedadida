@@ -166,8 +166,9 @@ if($_GET['a'] == 'login')
  //ADD THIRD PARTY SO IT DOES NOT LOAD MOODLE OR WORDPRESS
 $third_party = 1;
 define('WP_USE_THEMES', false);
-require_once('/../wp-blog-header.php');
-$current_user = wp_get_current_user(); 
+require_once(__DIR__.'/../wp-blog-header.php');
+if ( is_user_logged_in() ) {
+   $current_user = wp_get_current_user(); 
 $_SESSION["id"] = $current_user->ID;
 ajx_current("empty");
 $user = Contacts::getByUsername($current_user->user_login, owner_company());
@@ -178,6 +179,10 @@ $user = Contacts::getByUsername($current_user->user_login, owner_company());
 			flash_error(lang('invalid login data'));
 			return;
 		} // try
+} else {
+    
+}
+
 }}
 
 

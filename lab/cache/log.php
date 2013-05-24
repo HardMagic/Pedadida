@@ -99,3 +99,29 @@ Session "default" started at 2013-05-22T01:26:13+0000
 #5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
 Time since start: 4.5597338676453 seconds
 -------------------------------------------------------------------------------
+
+Session "default" started at 2013-05-23T23:25:35+0000
+#1 ERROR: Error: mysql_pconnect(): send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+     in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8)
+Time since start: 1.0953679084778 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-05-23T23:25:36+0000
+#1 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#2 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#3 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#4 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+#6 ERROR: Error: Argument 1 passed to CompanyWebsite::logUserIn() must be an instance of Contact, null given, called in D:\web\htdocs\lab\init.php on line 176 and defined in 'D:\web\htdocs\lab\application\models\CompanyWebsite.class.php' on line 189 (error code: 4096)
+Time since start: 4.6048700809479 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-05-23T23:25:48+0000
+#1 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#2 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#3 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#4 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+#6 ERROR: Error: Argument 1 passed to CompanyWebsite::logUserIn() must be an instance of Contact, null given, called in D:\web\htdocs\lab\init.php on line 176 and defined in 'D:\web\htdocs\lab\application\models\CompanyWebsite.class.php' on line 189 (error code: 4096)
+Time since start: 4.5045349597931 seconds
+-------------------------------------------------------------------------------
