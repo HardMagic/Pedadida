@@ -214,6 +214,7 @@ function attitude_headerdetails() {
 				}
 			?>
 				<hgroup id="site-logo" class="clearfix">
+				<div style="float: left">
 					<?php 
 						if( $options[ 'header_show' ] != 'disable-both' && $options[ 'header_show' ] == 'header-text' ) {
 						?>
@@ -235,8 +236,13 @@ function attitude_headerdetails() {
 						<?php
 						}
 						?>
-					
+						</div>
+					<div style="float:left">
+				<a href="#leftpanel" data-role="button" data-inline="true" data-icon="bars" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-left ui-btn-up-c"><span class="ui-btn-inner"><img src="/logos/navmenu3.gif"><span class="ui-icon ui-icon-bars ui-icon-shadow">&nbsp;</span></span></a>
+				</div>
+				
 				</hgroup><!-- #site-logo -->
+				
 			
 		</div><!-- .hgroup-wrap -->
 	</div><!-- .container -->	
@@ -254,7 +260,9 @@ function attitude_headerdetails() {
 			echo '<nav id="access" class="clearfix">
 					<div class="container clearfix">';
 				wp_nav_menu( $args );
-			echo '</div><!-- .container -->
+			echo '
+			
+			<a href="#rightpanel" data-role="button"  data-inline="true" data-icon="bars" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-right ui-btn-up-c"><span class="ui-btn-inner"><img src="/logos/navmenu3.gif"><span class="ui-icon ui-icon-bars ui-icon-shadow">&nbsp;</span></span></a></div><!-- .container -->
 					</nav><!-- #access -->';
 		}
 		else {

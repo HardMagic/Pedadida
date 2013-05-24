@@ -17,6 +17,47 @@
  */
 if ( ! isset( $content_width ) )
 	$content_width = 700;
+	
+	/*
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+*/
+
+	function get_jqm() {
+wp_enqueue_script(
+ 'jqm_js',
+ 'http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js',
+ array('jquery'),
+ '1.3.1'
+ );
+ 
+ wp_enqueue_script(
+ 'jqm_js',
+ 'http://code.jquery.com/jquery-1.9.1.min.js',
+ array('jquery'),
+ '1.9.1'
+ );
+
+wp_register_style(
+ 'jqm_css',
+ 'http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css',
+ '',
+ '1.3.1'
+ );
+wp_enqueue_style(
+ 'jqm_css',
+ 'http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css',
+ '',
+ '1.3.1'
+ );
+ }
+ add_action('wp_enqueue_scripts', 'get_jqm');
+ 
+ 
+	
+	function my_function_admin_bar(){  }
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');
 
 add_action( 'attitude_init', 'attitude_constants', 10 );
 /**

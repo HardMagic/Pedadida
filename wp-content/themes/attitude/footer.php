@@ -23,7 +23,7 @@
 	   	do_action( 'attitude_before_footer' );
 	   ?>	
 	   
-	   <footer id="colophon" class="clearfix">
+	   <footer id="colophon"  data-role="footer" class="clearfix">
 			<?php
 		      /** 
 		       * attitude_footer hook		       
@@ -58,6 +58,6 @@
 	?> 
 
 <?php wp_footer(); ?>
-
+  </div>
 </body>
 </html>
