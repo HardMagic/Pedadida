@@ -758,12 +758,19 @@ if (empty($USER->id) || $USER->id == 1)
  $third_party = 1;
 	define('WP_USE_THEMES', false);
 	require_once(__DIR__.'/../../wp-blog-header.php');
+	if ( is_user_logged_in() ) {
 	$current_user = wp_get_current_user(); 
+	
 	$USER->id = $current_user->ID;
 	$USER->email = $current_user->user_email;
 	/*$USER->username = $current_user->user_login;
 	$USER->firstname = $current_user->user_firstname;
 	$USER->lastname = $current_user->user_lastname; */
+	}
+	else{
+	$actual_link = full_url();
+    wp_redirect( wp_login_url( $actual_link  )  );
+	}
 	}
 // Late profiling, only happening if early one wasn't started
 if (!empty($CFG->profilingenabled)) {

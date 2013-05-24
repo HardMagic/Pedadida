@@ -180,7 +180,9 @@ $user = Contacts::getByUsername($current_user->user_login, owner_company());
 			return;
 		} // try
 } else {
-    
+	
+$actual_link = full_url();
+    wp_redirect( wp_login_url( $actual_link  )  );
 }
 
 }}

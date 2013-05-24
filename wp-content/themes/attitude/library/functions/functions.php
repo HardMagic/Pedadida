@@ -360,11 +360,28 @@ add_filter( 'wp_nav_menu_items', 'attitude_nav_menu_alter', 10, 2 );
 if ( !function_exists('attitude_nav_menu_alter') ) {
 	function attitude_nav_menu_alter( $items, $args ) {
 		$items .= '<li class="default-menu"><a href="'.get_bloginfo('url').'" title="Navigation">'.__( 'Navigation','attitude' ).'</a></li>';
+		$items.= '<li><a href="'.network_site_url().'class/">Classroom</a></li>';
 		$items.= '<li><a href="'.network_site_url().'library/">Library</a></li>';
 		$items.= '<li><a href="'.network_site_url().'lab/">Lab</a></li>';
+		$actual_link = full_url();
+			if ( ! is_user_logged_in() )
+				$loglink = '<a href="' . esc_url( wp_login_url($actual_link) ) . '">Sign In</a>';
+				else
+				$loglink = '<a href="' . esc_url( wp_logout_url($actual_link) ) . '">Sign Out</a>';
+		$items.= '<li>'.$loglink.'</li>';
 		return $items;
 	}
 }
+
+	function full_url()
+{
+    $s = empty($_SERVER["HTTPS"]) ? '' : ($_SERVER["HTTPS"] == "on") ? "s" : "";
+    $sp = strtolower($_SERVER["SERVER_PROTOCOL"]);
+    $protocol = substr($sp, 0, strpos($sp, "/")) . $s;
+    $port = ($_SERVER["SERVER_PORT"] == "80") ? "" : (":".$_SERVER["SERVER_PORT"]);
+    return $protocol . "://" . $_SERVER['SERVER_NAME'] . $port . $_SERVER['REQUEST_URI'];
+}
+
 
 /****************************************************************************************/
 

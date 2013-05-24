@@ -321,12 +321,7 @@ if (!$valid)
 	$_SERVER['REQUEST_URI'] : $_SERVER['SCRIPT_NAME'] . (( isset($_SERVER
 	['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : '')));
     $path=$_SERVER["REQUEST_URI"];
-	?>
-	<script type="text/javascript">
-	top.location.href="<?php wp_login_url( urlencode($path) ); ?><?php if ($autologgedout) { ?>&auto=true<?php } ?><?php if ($nocookies) { ?>&nocookies=true<?php } ?>";
-	</script>
-	<?php
-    exit();
+	$userref=1;
     }
 
 # Handle IP address restrictions
