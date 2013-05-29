@@ -222,3 +222,21 @@ Session "default" started at 2013-05-24T01:26:53+0000
 #5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
 Time since start: 3.9121010303497 seconds
 -------------------------------------------------------------------------------
+
+Session "default" started at 2013-05-25T06:07:42+0000
+#1 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#2 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#3 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#4 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+Time since start: 6.0702340602875 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-05-29T21:05:04+0000
+#1 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#2 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#3 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#4 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+Time since start: 6.1083679199219 seconds
+-------------------------------------------------------------------------------
