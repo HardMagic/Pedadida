@@ -69,6 +69,8 @@ $pedadida_language = 'en-US';
 $pedadida_library_name = 'Library';
 
 
+// Name of Your Pedadida Library Upload Folder
+$pedadida_library_upload_folder = '';
 
 
 ?>

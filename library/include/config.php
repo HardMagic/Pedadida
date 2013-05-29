@@ -170,6 +170,10 @@ $defaulttheme="Pedadida";
  
 $available_themes=array("Pedadida","greyblu","black");
 
+# Allow to change the location of the upload folder, so that it is not in the
+# web visible path. Relative and abolute paths are allowed.
+$local_ftp_upload_folder =  $pedadida_library_upload_folder;
+
 
 # JUpload Chunk Size (bytes)
 # The size in bytes that Jupload (Java Batch Upload) will break files into.
