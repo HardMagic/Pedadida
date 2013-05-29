@@ -159,6 +159,17 @@ $user_rating_stats=true;
 
 $php_time_limit=1000;
 
+# Sets the default colour theme (defaults to white)
+$defaulttheme="Pedadida";
+
+# Theme chips available. This makes it possible to add new themes and chips using the same structure.
+# To create a new theme, you need a chip in gfx/interface, a graphics folder called gfx/<themename>,
+# and a css file called css/Col-<themename>.css
+# this is a basic way of adding general custom themes that do not affect SVN checkouts, 
+# though css can also be added in plugins as usual.
+ 
+$available_themes=array("Pedadida","greyblu","black");
+
 
 # JUpload Chunk Size (bytes)
 # The size in bytes that Jupload (Java Batch Upload) will break files into.
