@@ -601,4 +601,12 @@ $helptxt['custom_mask'] = 'The input mask is important for your forum\'s securit
 	</div><br /><br />
 	More information and advanced techniques may be found on the internet.';
 
+$helptxt['customsmi_show_enclosed'] = 'Encloses the user input within the URL profile link.  This will allow you to add more Social Media Icons and allow them to align with the default icons, etc. <br /><u>Example:</u> <strong>Facebook:</strong> (find the profile path)<br />
+		http://facebook.com/johndoe  (sample profile URL)<br />
+		http://facebook.com/{INPUT}  (this will be used as the setting) <br /><br />
+		Use the following variable:<br />
+		<ul class="normallist">
+			<li>{INPUT} - The input specified by the user. This will insert the username in the Social Media profile URL supplied by the member when they modify this option.</li>
+		</ul>';
+
 ?>

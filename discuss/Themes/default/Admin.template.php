@@ -1123,15 +1123,26 @@ function template_edit_profile_field()
 									<option value="0"', $context['field']['placement'] == '0' ? ' selected="selected"' : '', '>', $txt['custom_edit_placement_standard'], '</option>
 									<option value="1"', $context['field']['placement'] == '1' ? ' selected="selected"' : '', '>', $txt['custom_edit_placement_withicons'], '</option>
 									<option value="2"', $context['field']['placement'] == '2' ? ' selected="selected"' : '', '>', $txt['custom_edit_placement_abovesignature'], '</option>
+									<option value="3"', $context['field']['placement'] == '3' ? ' selected="selected"' : '', '>', $txt['custom_edit_placement_withsmiicons'], '</option>
 								</select>
 							</dd>
 							<dt>
 								<a id="field_show_enclosed" href="', $scripturl, '?action=helpadmin;help=field_show_enclosed" onclick="return reqWin(this.href);" class="help"><img src="', $settings['images_url'], '/helptopics.gif" class="icon" alt="', $txt['help'], '" align="top" /></a>
 								<strong>', $txt['custom_edit_enclose'], ':</strong><br />
 								<span class="smalltext">', $txt['custom_edit_enclose_desc'], '</span>
+								<br><br><a id="customsmi_show_enclosed" href="', $scripturl, '?action=helpadmin;help=customsmi_show_enclosed" onclick="return reqWin(this.href);" class="help"><img src="', $settings['images_url'], '/helptopics.gif" class="icon" alt="', $txt['help'], '" align="top" /></a>
+								<strong>', $txt['custom_smi_enclose'], ':</strong><br />
+								<span class="smalltext">', $txt['custom_smi_enclose_desc'], '</span>
 							</dt>
 							<dd>
 								<textarea name="enclose" rows="10" cols="50">', @$context['field']['enclose'], '</textarea>
+							</dd>
+							<dt>
+								<strong>', $txt['custom_smiicon_image'], ':</strong><br />
+								<span class="smalltext">', $txt['custom_smiicon_image_desc'], '</span>
+							</dt>
+							<dd>
+								', $txt['customsmi_images_url'], '<textarea name="customsmiicon" rows="1" cols="30">', @$context['field']['customsmiicon'], '</textarea> <img src="', $settings['images_url'], '/', $context['field']['customsmiicon'] == '' ? 'blank.gif' : $context['field']['customsmiicon'], '" alt="*" />
 							</dd>
 						</dl>
 					</fieldset>

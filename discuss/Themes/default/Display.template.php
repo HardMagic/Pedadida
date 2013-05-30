@@ -170,6 +170,15 @@ function template_main()
 	// Allow adding new buttons easily.
 	call_integration_hook('integrate_display_buttons', array(&$normal_buttons));
 
+	// Article related buttons...
+	if (!empty($modSettings['articleactive']))
+	{
+		if ($context['can_add_article'] && !$context['topic_is_article'])
+			$normal_buttons['add_article'] = array('text' => 'sp-add_article', 'image' => 'addarticle.gif', 'lang' => true, 'url' => $scripturl . '?action=portal;sa=addarticle;message=' . $context['topic_first_message'] . ';return=' . $context['current_topic'] . '.' . $context['start'] . ';sesc=' . $context['session_id']);
+		if ($context['can_remove_article'] && $context['topic_is_article'])
+			$normal_buttons['remove_article'] = array('text' => 'sp-remove_article', 'image' => 'removearticle.gif', 'lang' => true, 'url' => $scripturl . '?action=portal;sa=removearticle;message=' . $context['topic_first_message'] . ';return=' . $context['current_topic'] . '.' . $context['start'] . ';sesc=' . $context['session_id']);
+	}
+
 	// Show the page index... "Pages: [1]".
 	echo '
 			<div class="pagesection">
@@ -348,6 +357,41 @@ function template_main()
 										', !empty($message['member']['yim']['link']) ? '<li>' . $message['member']['yim']['link'] . '</li>' : '', '
 									</ul>
 								</li>';
+
+			// This shows the social media icons.
+			if ($message['member']['has_messenger'] && $message['member']['can_view_profile'])
+				echo '
+								<li class="im_icons">
+									<ul>
+										', !isset($context['disabled_fields']['facebook']) && !empty($message['member']['facebook']['link']) ? '<li>' . $message['member']['facebook']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['myspace']) && !empty($message['member']['myspace']['link']) ? '<li>' . $message['member']['myspace']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['twitter']) && !empty($message['member']['twitter']['link']) ? '<li>' . $message['member']['twitter']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['googleplus']) && !empty($message['member']['googleplus']['link']) ? '<li>' . $message['member']['googleplus']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['linkedin']) && !empty($message['member']['linkedin']['link']) ? '<li>' . $message['member']['linkedin']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['youtube']) && !empty($message['member']['youtube']['link']) ? '<li>' . $message['member']['youtube']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['deviantart']) && !empty($message['member']['deviantart']['link']) ? '<li>' . $message['member']['deviantart']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['pinterest']) && !empty($message['member']['pinterest']['link']) ? '<li>' . $message['member']['pinterest']['link'] . '</li>' : '', '';
+
+			// Any custom fields with Social Media?
+			if (!empty($message['member']['custom_fields']))
+			{
+				$shown = false;
+				foreach ($message['member']['custom_fields'] as $custom)
+				{
+					if ($custom['placement'] != 3 || empty($custom['value']))
+						continue;
+					if (empty($shown))
+					{
+						$shown = true;
+					}
+					echo '
+										<li><a href="', $custom['value'], '" title="', $custom['title'], ' - ', $custom['value'], '" /><img src="', $settings['images_url'], '/', $custom['customsmiicon'], '" /></a></li>';
+				}
+				if ($shown)
+					echo '
+									</ul>
+								</li>';
+			}
 
 			// Show the profile, website, email address, and personal message buttons.
 			if ($settings['show_profile_buttons'])
@@ -592,6 +636,39 @@ function template_main()
 
 		echo '
 							</div>';
+
+
+		
+		// Add Facebook Like, Tweet, and Google +1
+		if (!empty($modSettings['socialization_onoff'])) {
+			if ($message['id'] == $context['topic_first_message']) {
+				echo '
+							<br />
+							<div style="margin-left:auto;margin-right:auto;text-align:center;padding-left:12px">';
+
+				// Show Facebook Like icon in the first post
+				if (!empty($modSettings['facebook_like'])) {
+					echo '
+								<iframe src="http://www.facebook.com/plugins/like.php?href=', $scripturl, '?topic=', $context['current_topic'], '&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe>';
+				}
+
+				// Show Twitter Tweet icon in the first post
+				if (!empty($modSettings['twitter_tweet'])) {
+					echo '
+								<a href="https://twitter.com/share" class="twitter-share-button" data-url="', $scripturl, '?topic=', $context['current_topic'], '" data-counturl="', $scripturl, '?topic=', $context['current_topic'], '"></a><script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>';
+				}
+
+				// Show Google +1 icon in the first post
+				if (!empty($modSettings['googleplus_plusone'])) {
+					echo '
+								<div class="g-plusone" data-size="medium"></div><script type="text/javascript">(function() {var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);})();</script>';
+				}
+
+				echo '
+							</div>
+							<br />';
+			}
+		}
 
 		// Are there any custom profile fields for above the signature?
 		if (!empty($message['member']['custom_fields']))

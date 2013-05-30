@@ -142,6 +142,37 @@ function template_summary()
 		echo '
 					<dt>', $txt['email'], ': </dt>
 					<dd><em><a href="', $scripturl, '?action=emailuser;sa=email;uid=', $context['member']['id'], '">', $context['member']['email'], '</a></em></dd>';
+				echo'<dt>', $txt['smi_buddies_title'], ': </dt>
+				     <dd>', !isset($context['disabled_fields']['facebook']) && !empty($context['member']['facebook']['link']) ? '' . $context['member']['facebook']['link'] . '' : '', '
+				', !isset($context['disabled_fields']['myspace']) && !empty($context['member']['myspace']['link']) ? '' . $context['member']['myspace']['link'] . '' : '', '
+				', !isset($context['disabled_fields']['twitter']) && !empty($context['member']['twitter']['link']) ? '' . $context['member']['twitter']['link'] . '' : '', '
+				', !isset($context['disabled_fields']['googleplus']) && !empty($context['member']['googleplus']['link']) ? '' . $context['member']['googleplus']['link'] . '' : '', '
+				', !isset($context['disabled_fields']['linkedin']) && !empty($context['member']['linkedin']['link']) ? '' . $context['member']['linkedin']['link'] . '' : '', '				
+				', !isset($context['disabled_fields']['youtube']) && !empty($context['member']['youtube']['link']) ? '' . $context['member']['youtube']['link'] . '' : '', '
+				', !isset($context['disabled_fields']['deviantart']) && !empty($context['member']['deviantart']['link']) ? '' . $context['member']['deviantart']['link'] . '' : '', '
+				', !isset($context['disabled_fields']['pinterest']) && !empty($context['member']['pinterest']['link']) ? '' . $context['member']['pinterest']['link'] . '' : '', '';
+
+		// Any custom fields with Social Media?
+	if (!empty($context['custom_fields']))
+	{
+		$shown = false;
+		foreach ($context['custom_fields'] as $field)
+		{
+			if ($field['placement'] != 3 || empty($field['output_html']))
+				continue;
+
+			if (empty($shown))
+			{
+				echo '';
+				$shown = true;
+			}
+
+			echo ' <a href="', $field['output_html'], '" title="', $field['name'], ' - ', $field['value'], '" /><img src="', $settings['images_url'], '/', $field['customsmiicon'], '" /></a>';
+		}
+
+		if (!empty($shown))
+			echo '';
+	}
 
 	if (!empty($modSettings['titlesEnable']) && !empty($context['member']['title']))
 		echo '

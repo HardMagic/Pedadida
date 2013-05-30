@@ -290,6 +290,42 @@ function template_folder()
 					</ul>
 				</li>';
 
+			// This shows the social media icons.
+			if ($message['member']['has_messenger'] && $message['member']['can_view_profile'])
+				echo '
+								<li class="im_icons">
+									<ul>
+										', !isset($context['disabled_fields']['facebook']) && !empty($message['member']['facebook']['link']) ? '<li>' . $message['member']['facebook']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['myspace']) && !empty($message['member']['myspace']['link']) ? '<li>' . $message['member']['myspace']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['twitter']) && !empty($message['member']['twitter']['link']) ? '<li>' . $message['member']['twitter']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['googleplus']) && !empty($message['member']['googleplus']['link']) ? '<li>' . $message['member']['googleplus']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['linkedin']) && !empty($message['member']['linkedin']['link']) ? '<li>' . $message['member']['linkedin']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['youtube']) && !empty($message['member']['youtube']['link']) ? '<li>' . $message['member']['youtube']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['deviantart']) && !empty($message['member']['deviantart']['link']) ? '<li>' . $message['member']['deviantart']['link'] . '</li>' : '', '
+										', !isset($context['disabled_fields']['pinterest']) && !empty($message['member']['pinterest']['link']) ? '<li>' . $message['member']['pinterest']['link'] . '</li>' : '', '';
+
+
+			// Any custom fields with Social Media?
+			if (!empty($message['member']['custom_fields']))
+			{
+				$shown = false;
+				foreach ($message['member']['custom_fields'] as $custom)
+				{
+					if ($custom['placement'] != 3 || empty($custom['value']))
+						continue;
+					if (empty($shown))
+					{
+						$shown = true;
+					}
+					echo '
+										<li><a href="', $custom['value'], '" title="', $custom['title'], ' - ', $custom['value'], '" /><img src="', $settings['images_url'], '/', $custom['customsmiicon'], '" /></a></li>';
+				}
+				if ($shown)
+					echo '
+									</ul>
+								</li>';
+			}
+								
 				// Show the profile, website, email address, and personal message buttons.
 				if ($settings['show_profile_buttons'])
 				{
