@@ -30,7 +30,12 @@ if ( !isset( $current_site ) || !isset( $current_blog ) ) {
 		} elseif ( substr( $domain, -4 ) == ':443' ) {
 			$domain = substr( $domain, 0, -4 );
 			$_SERVER['HTTP_HOST'] = substr( $_SERVER['HTTP_HOST'], 0, -4 );
-		} else {
+		}
+		elseif ( substr( $domain, -5 ) == ':9080' ) {
+			$domain = substr( $domain, 0, -5 );
+			$_SERVER['HTTP_HOST'] = substr( $_SERVER['HTTP_HOST'], 0, -5 );
+			}
+		else {
 			wp_load_translations_early();
 			wp_die( __( 'Multisite only works without the port number in the URL.' ) );
 		}
