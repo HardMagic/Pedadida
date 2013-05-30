@@ -756,7 +756,7 @@ $USER    = &$_SESSION['USER'];
 if (empty($USER->id) || $USER->id == 1)
 {
  $third_party = 1;
-	define('WP_USE_THEMES', false);
+	//define('WP_USE_THEMES', false);
 	require_once(__DIR__.'/../../wp-blog-header.php');
 	if ( is_user_logged_in() ) {
 	$current_user = wp_get_current_user(); 
