@@ -765,6 +765,8 @@ if (empty($USER->id) || $USER->id == 1)
 	$USER->username = $current_user->user_login;
 	$USER->firstname = $current_user->user_firstname;
 	$USER->lastname = $current_user->user_lastname;
+	$USER->lastaccess = time();
+	$USER->deleted = 0;
 	}
 	else{
 	$actual_link = full_url();
