@@ -174,6 +174,9 @@ $available_themes=array("Pedadida","greyblu","black");
 # web visible path. Relative and abolute paths are allowed.
 $local_ftp_upload_folder =  $pedadida_library_upload_folder;
 
+$debug_log=true;
+# The location of the log file
+$debug_log_location = $pedadida_classroom_data.'\library_log.txt';
 
 # JUpload Chunk Size (bytes)
 # The size in bytes that Jupload (Java Batch Upload) will break files into.
