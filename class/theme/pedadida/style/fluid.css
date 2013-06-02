@@ -1,0 +1,103 @@
+/************** overwrite page-content min-width **************/
+/*
+*  for browsers who knows Media Queries
+*/
+
+.sitelink img {display:none;}
+
+
+@media screen and (max-width : 1200px) {
+#page-content{
+        min-width: 320px;  /* 900px; */
+}
+}
+
+
+/************** 2 Column **************/
+@media screen and (min-width:541px) and (max-width:800px) {
+#region-main-box {
+    left: 0 !important;
+    width: 200% !important;
+}
+#region-post-box {
+    left: 50% !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+#region-main {
+    margin-left: 200px !important;
+    margin-right: 0 !important;
+}
+#region-pre {
+    float: left !important;
+    left: 0 !important;
+    margin-left: -50% !important;
+    width: 200px;
+}
+#region-post {
+    clear: left;
+    float: left;
+    left: 0;
+    margin-left: -50%;
+}
+}
+
+/************** 1 Column **************/
+@media only screen and (max-width:540px) {
+#page-header {
+    float:none;
+    width: 100%;
+}
+#page-content {
+    float:none;
+    min-width:0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#page-content #region-main-box {
+    float:none;
+    left:0;
+    position: relative;
+    width: 100%;
+}
+#page-content #region-post-box {
+    float:none;
+    left:0;
+    margin-left:0 !important;
+    width: 100%;
+}
+#page-content #region-main-wrap {
+    float:none;
+    width: 100%;
+    right:auto;
+}
+#page-content #region-main {
+    margin-left:0 !important;
+    margin-right: 0 !important;
+    overflow: hidden;
+}
+#page-content #region-pre {
+    float:none;
+    left:0;
+    margin-left:0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#page-content #region-post {
+    float:none;
+    left: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.navbutton {
+    text-align: left;
+    float: left;
+
+}
+#helppopupbox{
+    width: 250px !important;
+}
+}

@@ -1,0 +1,468 @@
+body input{font-family:Arial,Helvetica,sans-serif;}
+select,input,button,textarea{font-size:0.9em;}
+a:link,a:visited {color: #256383;}
+a:hover,a:active {color: #251c17;}
+a img {border: none;}
+a:active {outline: none;}
+
+/* Header Profile
+-------------------------- */
+#header-profileoptions ul{margin-right:4px;}
+#header-profileoptions ul li{display:inline;padding-left:5px;font-size:1.3em;}
+.loginform_row{padding:0 0 5px;}
+
+.loginbox.twocolumns .loginpanel {float:left;width:49.5%;border-right: 1px solid;margin-bottom:0px;padding-bottom:0px;}    
+
+/*messages and overlays */
+#newmessageoverlay {
+  font-weight: normal;
+  border: 1px solid       #222;
+  background:             #444;
+  color:                  #ddd;
+  text-shadow: 0 -1px 0px #000;
+  background-image: -moz-linear-gradient(top, 
+                          #333  0%,
+                          #333  5%,
+                          #444  15%, 
+                          #444  60%, 
+                          #222  100%);
+  background-image: -webkit-gradient(linear, center top, center bottom, 
+    color-stop(0,         #333), 
+    color-stop(5%,        #333), 
+    color-stop(15%,       #444), 
+    color-stop(60%,       #444), 
+    color-stop(1,         #222));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#222222')";
+
+    
+    
+   
+}
+
+#newmessageoverlay a {
+ color: #e98a15; 
+  font-weight: bold;
+  }
+
+/* Online user ---------------------------*/
+.unlist li{background:url([[pix:theme|images/chevron]]) no-repeat 98% center}
+
+.listentry .user{
+	
+	display: inline-block;
+	
+}
+.listentry .message{
+	
+	display: inline-block;
+	float: right;
+	margin-top: -5px;
+}
+
+
+.listentry .user a, .listentry .message a{
+	display:inline;
+	font-size: 12px;
+}
+.listentry .iconsmall{
+	border: 0px;
+}
+
+.listentry .user .userpicture{
+	
+	width: 20px;
+	height: 20px;
+}
+/* Profileblock
+-----------------------*/
+.logininfo{
+ width: 99%;background-color:#fff;border:1px solid #ccc;-webkit-border-radius:6px;
+	min-height: 57px;
+	padding-right: 3px;
+}
+
+.langmenu{
+width: 100%;
+text-align: center;
+
+}
+
+.userpicture{
+	
+	border: 0px solid #48565e;-webkit-border-radius:8px;
+	float: left;
+	clear: both;
+	margin: 2px;
+}
+/* Menu Navigation
+-------------------------- */
+#page-navigation{font-size:1.1em;height:36px;margin:0;padding:0 40px;}
+#page-navigation li{list-style:none;float:left;}
+#page-navigation a{display:block;padding:5px 10px;}
+.navbutton { height:18px; margin-top:4px;}
+/* Dock
+---------------------------*/
+#dock{display: none;}
+/* Custom menu
+-------------------------- */
+.custommenu {background-color: #48565e;
+}
+/* Breadcrumb
+--------------------------- ---------------------------------------------------------------*/
+.navbar{font-size: 1em;background-color:#eee;border-bottom:1px solid #DDD;margin:0;padding: 3px 0;overflow:hidden;white-space:nowrap	
+}
+.breadcrumb{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;max-width:60%
+}
+.breadcrumb a,a:link,a:active{color:#1D8AC3;}
+.sep{background:url([[pix:theme|breadcrumb_arrow]]) no-repeat scroll 100% 50%;margin-right:1px;
+	padding: 0.98em 1px;
+}
+/* Calendar
+--------------------------- */
+
+#pages-wrapper3 .calendar_filters .calendar_event_user, #pages-wrapper3 .calendar_filters .calendar_event_group, #pages-wrapper3 .calendar_filters .calendar_event_course, #pages-wrapper3 .calendar_filters .calendar_event_global{
+	float:left;
+}
+#pages-wrapper3 .eventname{
+	float:left;
+}
+.calendar-controls .current {
+	padding-bottom: 5px;
+	text-align: center;
+}
+.calendar-controls .hide , .arrow_link {
+	display: none;
+}
+.minicalendar {
+	background-color:#fff;border:1px solid #ccc;-webkit-border-bottom-right-radius:6px;-webkit-border-bottom-left-radius:6px
+}
+.calendar-controls {
+	background-color:#fff;border:1px solid #ccc;-webkit-border-top-left-radius:8px;-webkit-border-top-right-radius:8px;
+}
+
+.minicalendar td,.minicalendar th{border-color:#EEE;border-width:0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.calendartab th,.calendartable td{border-width:0;}
+/* Tabs
+--------------------------- */
+.tabtree {z-index:0;}
+.tabtree .tabrow0 li.here a{background:#fff url([[pix:theme|gradient-sb]]) repeat-x 0 0;}
+.tabtree .tabrow0 .tabrow1 li a{background:none !important;}
+
+.tabtree .tabrow0 li a {line-height: 28px;
+	background-color: #ddd;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+/* User
+--------------------------- */
+.userinfobox .content{background:url([[pix:theme|gradient-sb]]) repeat-x 0 0;border-width:2px;}
+
+#user-picture{
+	float: right;
+}
+/* Content
+--------------------------- */
+#page-content {min-width:300px;min-height:550px;}
+
+/* YUI messes with IE unless we go overboard here */
+img.iconsmall, .commands a img {height:15px; margin:2px; width:15px; border: 1px solid #808080; padding:1px; -webkit-border-radius:5px;-moz-border-radius: 5px; }
+ul.section .commands,
+.block_with_controls .commands {position:absolute; top:0px; right:0px;}
+ul.section li {clear:right;}
+#page-content .current {background-color: #ebf1de;}
+ul.section li div {min-height:23px;}
+ul.section li.label div {height: auto;}
+ul.section li.label .commands {margin-bottom:2px;}
+ul.section li.label {padding-bottom:5px !important;}
+body.editing ul.section>li {border-bottom: 1px dashed #808080; position:relative;}
+
+/* Blocks
+--------------------------- */
+.block {border-style:none;}
+.block .header .block_action{margin:4px 5px;}
+.block_with_controls .header .title {position:relative;padding-bottom:20px;}
+.block .commands{clear:both;height:16px;padding:4px;top:auto;bottom:0px;}
+.block .content{padding:5px 10px;}
+.block_login label{font-size:0.85em;display:block;}
+.block_login .fld input{width:95%;margin:1px 0 5px;padding:2px;}
+
+.block_course_summary .content{padding:10px;}
+.block_course_overview li{
+	display:none;
+}
+/* Forms
+------------------------ */
+.mform fieldset{border-color:#ddd;}
+.mform legend{border:1px solid #ddd;background:url([[pix:theme|gradient-sb]]) repeat-x 0 -25%;padding:2px 7px;}
+.mform .fitem .felement {  width: 100%;margin-left: 0px;margin-right: 0px;}
+.mform .fitem fieldset.felement{float:left;}
+.mform .fitem .fitemtitle{	width:100%;float: left;
+	text-align: left;
+}
+
+.mform .filemanager, #id_message_tbl, #id_subscribe {
+	width: 85% !important;
+	left: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+/* Footer
+-------------------------- */
+
+#back-to-top {position: fixed;bottom: 32px;right: 40px;text-align: center;cursor: pointer;opacity: .5;filter:alpha(opacity=50);display:none;}
+#back-to-top a.arrow {padding: 5px 10px;font-size: 36px;color: #333;background: #EEE;border: 1px solid #CCC;border-bottom: 1px solid #AAA;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+#back-to-top a.text {display: block;background: white;visibility: hidden;position: relative;top: 10px;}
+#back-to-top a {text-decoration: none;border: 0;outline: none;}
+
+
+/* Course
+---------------------------*/
+.course-content .content{
+	left: -30px;
+	position: relative;
+	width: 90%;
+}
+.course-content ul.weeks .content{
+	left: -40px;
+	
+}
+
+.course-content .section .mod-indent{
+	padding-bottom: 2px;
+}
+.course-content .section .activity img.activityicon {
+    vertical-align:middle;height:27px;width:26px;
+    border-radius: 5px;
+	font-variant: normal;
+	border-width: 0;
+}
+.course-content .content .sectionname{
+	font-size: 16px;
+}
+
+.course-content ul.topics li#section-0 div.left{
+	display: none;
+}
+.course-content ul.topics li.section .left{
+	margin-left: -20px;
+}
+.course-content ul.topics li.section .right{font-size: 14px;
+	color: #fff;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	width: 30px;
+}
+.course-content ul.weeks .weekdates{
+	
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	width: 90%;
+}
+
+.path-course-view .section .content .weekdates {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+.course-content ul.topics li.section{background:transparent url([[pix:theme|topic-bg-bottom]]) repeat-x scroll bottom center;margin: 0;padding: 0;}
+.course-content ul.weeks li.section{background:transparent url([[pix:theme|topic-bg-bottom]]) repeat-x scroll bottom center;margin:0;padding: 0;}
+
+#intro, #pageintro { background:#f7f7f7; }
+
+/* Forum
+---------------------------*/
+
+.path-mod-forum .forumheaderlist .discussion .lastpost {white-space: normal;text-align: right;}
+.path-mod-forum .forumheaderlist .replies,
+.path-mod-forum .forumheaderlist .discussion .author {white-space: normal;}
+.mod-indent span.unread, .forumheaderlist span.unread, .forumheaderlist span.read {
+	float:right;
+	color: #fff;
+	max-width:15px;
+	height:15px;
+	background-color: #a51c04 !important;
+	border-radius: 8px;
+	padding: 1px 5px;
+	-webkit-box-shadow: 0 0 3px 3px#888;
+	box-shadow: 0 0 3px 3px #888;
+	border: 1px solid #fff;
+}
+#page-mod-forum-view .unread a:first-child {padding-right: 0px;}
+span.unread a{
+	color: #fff;
+	text-align: center;
+}
+.forumheaderlist .discussion .replies span.unread a{
+	box-shadow: none;
+	padding: 0;
+	border-style: none;
+	border-width: 0;
+	background-color: transparent;
+}
+.forumheaderlist .discussion .replies a{
+	
+	background-color: #e7ee55;
+	padding: 1px 5px;
+	box-shadow: 1px 1px 2px 1px #ccc;
+	border-top: 1px solid #8b3c05;
+}
+.path-mod-forum .forumheaderlist .r1 td { background:#ebf1de; }
+.firstpost .header {-webkit-border-top-right-radius:25px;	
+}
+.forumpost .maincontent .left,.forumheaderlist .replies .unread .iconsmall{
+	display:none;
+}
+.forumpost .topic {padding-left:7px;
+	
+}
+.forumpost .topic .subject {
+	text-decoration: none;
+}
+.forumpost .topic .author { font-style:italic;font-size: 11px;
+	text-decoration: none;
+}
+.forumpost .topic .author a{
+	color: #ebf1de;
+}
+.forumpost .content { border: 1px dotted #aaa;padding: 5px 7px; }
+.forumpost .options .commands {position:relative; }
+
+/* Grades */
+
+.user-grade{
+	width: 95%;
+}
+
+/* Assignments
+--------------------------*/
+.path-mod-assignment #dates table .c0 { background:#f5f5f5; }
+
+/* Folder
+--------------------------*/
+#page-mod-folder-edit .foldertree { width: 95% }
+
+/* Event list
+--------------------------*/
+div.eventlist table.event div.commands {position:relative; float:right; top:auto; right:auto;}
+
+/* Glossaries
+--------------------------*/
+table.glossarypost {
+	border-bottom: 1px solid #DDD;
+}
+
+/** Custom CSS **/
+[[setting:customcss]]
+
+/* ---------------- Course categories index --------------------------------------------- */
+.coursebox .teachers {-webkit-border-bottom-left-radius:8px;-webkit-border-top-left-radius:8px;position:relative;border:1px solid #cacdd5;z-index:0;padding: 5px;background-color:#eee;
+	margin: 5px;
+}
+
+.coursebox .teachers li{background:url([[pix:theme|images/ipad-small-author]]) no-repeat;margin-top:3px;color:#666;background-position:left center;padding-left:18px;width:80%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.8em}
+
+.coursebox .summary {text-align: justify;	
+	font-size: small;
+	}
+.coursebox .summary .category {text-align:right;}
+/* Category list */
+
+.categorybox {
+    border: medium none;
+    background: #FFFFFF;
+    border: 1px #B3B3B3 solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Course list */
+
+.coursebox {
+    border: 1px #B3B3B3 solid;
+    border-radius: 10px;
+    background: #FFFFFF;
+    margin-bottom: 15px;
+    width: auto;
+    padding: 10px;
+}
+
+
+/* ---------------- General boxes throughout site ---------------- */
+.generaltable .odd .useremail, .generaltable .even .useremail {
+	font-size: 12px;
+	background: none !important;
+	text-decoration: none;
+	color: #3d3d3d;
+	font-weight: normal;
+	font-style: normal;
+}
+.sitetopic {margin-bottom:15px;}
+.generalbox {
+    background: #FFFFFF;
+    border: 1px #B3B3B3 solid;
+    border-radius: 10px;
+	padding: 5px;margin: 10px;
+}
+.generalbox table.generalbox {
+    margin: auto;
+}
+.generalbox form input,.generalbox form textarea{font-size:15px;border:1px solid #aaa;padding:5px;-webkit-border-radius:5px;-border-radius:5px;-webkit-box-shadow:inset #ccc 0 1px 3px;width:auto;}
+.generalbox .message{
+	display: inline-block;
+}
+
+/* wrapper2---------------------------------- */
+
+#pop-account #pages-wrapper2{position:relative;z-index:1;overflow:scroll;max-height:500px}#pop-account #pages-wrapper2 .dark img{background:rgba(0,0,0,.5);-webkit-border-radius:3px;padding:2px;width:24px;height:24px}
+
+#pop-account #pages-wrapper2 img{width:16px;height:16px;float:left;position:relative;display:inline;
+	
+}#pop-account #pages-wrapper2 a{color:#333;text-shadow:#fff 0 0 0;background:url([[pix:theme|images/chevron]]) no-repeat right center;width:90%;display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;padding: 2px 10px 2px 0}
+
+#pop-account #pages-wrapper2 ul li.has_children>a{background:url([[pix:theme|images/black-arrow-toggle]]) no-repeat 7px 13px;text-indent:13px}#pop-account #pages-wrapper2 ul li.has_children>a.arrow-toggle{background-position:7px -17px}
+
+#pop-account #pages-wrapper2 ul{background-color:#fff;-webkit-border-radius:6px;border:1px solid #ccc}#pop-account #pages-wrapper2 li{padding-left:10px;border-bottom:1px solid #ccc;background-image:none}#pop-account #pages-wrapper2 li:last-child{border-bottom-style:none}#pop-account #pages-wrapper2 ul ul{border-style:none}#pop-account #pages-wrapper2 li li{padding-left: 0;border-style:none}
+
+/* wrapper3---------------------------------- */
+
+#pop-block #pages-wrapper3{position:relative;z-index:1;overflow:scroll;max-height:500px}#pop-block #pages-wrapper3 .dark img{background:rgba(0,0,0,.5);-webkit-border-radius:3px;padding:2px;width:24px;height:24px}
+
+#pop-block #pages-wrapper3 .list img,#pop-block #pages-wrapper3 .unlist img{width:16px;height:16px;float:left;position:relative;display:inline;
+	margin-left: -8px;
+	
+}#pop-block #pages-wrapper3 .column a{color:#333;text-shadow:#fff 0 0 0;background:url([[pix:theme|images/chevron]]) no-repeat right center;width:90%;display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;padding: 10px 15px 2px 7px}
+
+#pop-block #pages-wrapper3 ul li.has_children>a{background:url([[pix:theme|images/black-arrow-toggle]]) no-repeat 7px 13px;text-indent:13px}#pop-block #pages-wrapper3 ul li.has_children>a.arrow-toggle{background-position:7px -17px}
+
+#pop-block #pages-wrapper3 ul{background-color:#fff;-webkit-border-radius:6px;border:1px solid #ccc}#pop-block #pages-wrapper3 li{padding-left:10px;border-bottom:1px solid #ccc;background-image:none}#pop-block #pages-wrapper3 li:last-child{border-bottom-style:none}#pop-block #pages-wrapper3 ul ul{border-style:none}#pop-block #pages-wrapper3 li li{padding-left:22px;border-style:none}
+
+/* Popinner 2 (block area)---------------------- */
+
+.pop-inner2{margin:4px;padding: 5px;background:#e0e0e9;-webkit-border-radius:4px;-webkit-box-shadow:inset rgba(0,0,0,.4) 0 2px 3px;text-align:left}.pop-inner2 ul{background-color:#fff;border:1px solid #ccc;-webkit-border-radius:6px;overflow:hidden}.pop-inner2 li{color:#999;border-bottom:1px solid #ccc}.pop-inner2 li:last-child{border-bottom-style:none}.pop-inner2 li a{color:#333;text-shadow:#fff 0 0 0;width:87%;display:block;white-space:nowrap;text-overflow:ellipsis;-webkit-tap-highlight-color:rgba(0,0,0,0);padding-top: 5px;padding-bottom: 5px;padding-left:10px;font-size:15px;overflow:hidden}
+
+/* Quiz */
+
+.que .formulation {-webkit-box-shadow:#3d4853 0 1px 1px;background:none;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;
+	border: 1px solid #c3c4c4;
+}
+
+/* Popinner navigation -----------------*/
+.pop-navi ul{overflow:hidden;
+	
+}.pop-navi li{color:#999;}
+
+/* hde HOME -----------------*/
+.block_navigation .navigation_node { display: none; }
+
+/* Initial values of nav button */
+
+#hidestuff{
+	display: none;
+}
+#showstuff{
+	display: inline-block;
+}
+
