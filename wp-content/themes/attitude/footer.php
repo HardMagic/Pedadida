@@ -59,5 +59,12 @@
 
 <?php wp_footer(); ?>
   </div>
+   <div id="ajaxim"></div>
+   
+  <?php $chat_url = get_home_url( '', '/chat'); ?>
+
+<script type="text/javascript"
+   src="<?php echo  $chat_url  ?>/js/im.load.js"></script>
+
 </body>
 </html>

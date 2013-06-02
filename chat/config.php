@@ -4,13 +4,14 @@
     
     // The IM server library.
     define('IM_LIBRARY', 'Default');
-    
+    require_once(__DIR__.'/../pedadida-config.php');
+
     // If you're using the default MySQL server, change the below to
     // match your settings.
-    define('MYSQL_USERNAME', 'pedadida');
-    define('MYSQL_PASSWORD', 'bli55m0ney');
-    define('MYSQL_HOSTNAME', 'localhost');
-    define('MYSQL_DATABASE', 'charles');
+    define('MYSQL_USERNAME', $pedadida_database_username);
+    define('MYSQL_PASSWORD', $pedadida_database_password);
+    define('MYSQL_HOSTNAME', $pedadida_database_host);
+    define('MYSQL_DATABASE', $pedadida_database_name);
     define('MYSQL_PREFIX', 'ajaxim_');
     
     // Session cookie used by Ajax IM
@@ -21,7 +22,7 @@
     
     // Cookie domain (e.g.: .domain.com, if you want it to work for
     // all domains and subdomains), if any.
-    define('COOKIE_DOMAIN', false);
+    define('COOKIE_DOMAIN', true);
     
     // If you're using the NodeJS server, change the below to match
     // your settings.

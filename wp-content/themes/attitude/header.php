@@ -29,6 +29,7 @@ reverse: true}, true, true);
 // -->
 </script>
 
+
 	<?php		
 		/** 
 		 * attitude_title hook
@@ -73,7 +74,7 @@ reverse: true}, true, true);
 
 	<?php
 		/** 
-		 * attitude_before hook
+		 * attitude_before hook
 		 */
 		do_action( 'attitude_before' );
 	?>

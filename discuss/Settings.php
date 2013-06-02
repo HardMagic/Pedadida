@@ -23,8 +23,8 @@ $mmessage = 'Okay faithful users...we\'re attempting to restore an older backup 
 ########## Forum Info ##########
 $mbname = 'University Discussion';		# The name of your forum.
 $language = 'english';		# The default language file set for the forum.
-$boardurl = 'http://demo.pedadida.com/discuss';		# URL to your forum's folder. (without the trailing /!)
-$webmaster_email = 'matt@themov.org';		# Email address to send emails from. (like noreply@yourdomain.com.)
+$boardurl = 'http://'. $pedadida_base .'/discuss';		# URL to your forum's folder. (without the trailing /!)
+$webmaster_email = $pedadida_email_notify;		# Email address to send emails from. (like noreply@yourdomain.com.)
 $cookiename = 'SMFCookie783';		# Name of the cookie to set for authentication.
 
 ########## Database Info ##########
@@ -42,9 +42,9 @@ $db_error_send = 1;
 
 ########## Directories/Files ##########
 # Note: These directories do not have to be changed unless you move things.
-$boarddir = 'D:\\web\\htdocs\\discuss';		# The absolute path to the forum's folder. (not just '.'!)
-$sourcedir = 'D:\\web\\htdocs\\discuss/Sources';		# Path to the Sources directory.
-$cachedir = 'D:\\web\\htdocs\\discuss/cache';		# Path to the cache directory.
+$boarddir = $pedadida_abs_path . 'discuss';		# The absolute path to the forum's folder. (not just '.'!)
+$sourcedir = $pedadida_abs_path . 'Sources';		# Path to the Sources directory.
+$cachedir = $pedadida_abs_path . 'cache';		# Path to the cache directory.
 
 ########## Error-Catching ##########
 # Note: You shouldn't touch these settings.
