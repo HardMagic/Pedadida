@@ -363,6 +363,7 @@ if ( !function_exists('attitude_nav_menu_alter') ) {
 		$items.= '<li><a href="'.network_site_url().'class/" data-ajax="false">Classroom</a></li>';
 		$items.= '<li><a href="'.network_site_url().'library/" data-ajax="false">Library</a></li>';
 		$items.= '<li><a href="'.network_site_url().'lab/" data-ajax="false">Lab</a></li>';
+		$items.= '<li><a href="'.network_site_url().'discuss/" data-ajax="false">Discussion</a></li>';
 		$actual_link = full_url();
 			if ( ! is_user_logged_in() )
 				$loglink = '<a href="' . esc_url( wp_login_url($actual_link) ) . '">Sign In</a>';
