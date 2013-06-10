@@ -9,8 +9,7 @@ Author URI: http://modelmatt.com
 */
 function smf_login($user_login, $user) {
 
-//require_once(__DIR__.'/../../../../pedadida-config.php'); // needed to get Secret Key
-require_once(__DIR__.'/../../../discuss/smf_2_api.php'); 
+require_once(plugin_dir_path(__FILE__). 'smf_2_api.php'); 
 
 smfapi_login($user_login);
 
