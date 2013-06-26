@@ -175,7 +175,7 @@
 	STEP_DBCONNECT => array(
 		'title'        =>  'Server Connection',
 		'portoptional' =>  true,
-		'encryptlogin' =>  true, 
+		'encryptlogin' =>  false, 
 		),
 
 
