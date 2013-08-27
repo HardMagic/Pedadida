@@ -7,11 +7,11 @@ include "include/collections_functions.php";
 $k=getvalescaped("k","");if (($k=="") || (!check_access_key_collection(getvalescaped("c",""),$k) && !check_access_key(getvalescaped("r",""),$k))) {include "include/authenticate.php";}
 
 if (!hook("replacetopurl"))
-	{ 
+	{
 	$topurl="pages/" . $default_home_page;
 	if ($use_theme_as_home) {$topurl="pages/themes.php";}
 	if ($use_recent_as_home) {$topurl="pages/search.php?search=" . urlencode("!last".$recent_search_quantity);}
-	} /* end hook replacetopurl */ 
+	} /* end hook replacetopurl */
 
 
 if (getval("c","")!="")
@@ -19,7 +19,7 @@ if (getval("c","")!="")
 	# quick redirect to a collection (from e-mails, keep the URL nice and short)
 	$c=getvalescaped("c","");
 	$topurl="pages/search.php?search=" . urlencode("!collection" . $c) . "&k=" . $k;;
-	
+
 	if ($k!="")
 		{
 		# External access user... set top URL to first resource
@@ -28,14 +28,14 @@ if (getval("c","")!="")
 			{
 			# Fetch collection data
 			$cinfo=get_collection($c);if ($cinfo===false) {exit("Collection not found.");}
-		
+
 			if ($feedback_resource_select && $cinfo["request_feedback"])
 				{
-				$topurl="pages/collection_feedback.php?collection=" . $c . "&k=" . $k;		
+				$topurl="pages/collection_feedback.php?collection=" . $c . "&k=" . $k;
 				}
 			else
 				{
-				$topurl="pages/search.php?search=" . urlencode("!collection" . $c) . "&k=" . $k;		
+				$topurl="pages/search.php?search=" . urlencode("!collection" . $c) . "&k=" . $k;
 				}
 			}
 		}
@@ -54,7 +54,7 @@ if (getval("u","")!="")
 	$u=getvalescaped("u","");
 	$topurl="pages/team/team_user_edit.php?ref=" . $u;
 	}
-	
+
 if (getval("q","")!="")
 	{
 	# quick redirect to a request (from e-mails)

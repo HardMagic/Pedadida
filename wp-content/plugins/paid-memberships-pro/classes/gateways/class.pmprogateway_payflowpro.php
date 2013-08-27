@@ -24,7 +24,7 @@
 				else
 				{
 					if(empty($order->error))
-						$order->error = "Unknown error: Authorization failed.";
+						$order->error = __("Unknown error: Authorization failed.", "pmpro");
 					return false;
 				}
 			}
@@ -47,14 +47,14 @@
 							if($this->void($order, $order->payment_transaction_id))
 							{
 								if(empty($order->error))
-									$order->error = "Unknown error: Payment failed.";							
+									$order->error = __("Unknown error: Payment failed.", "pmpro");
 							}
 							else
 							{
 								if(empty($order->error))
-									$order->error = "Unknown error: Payment failed.";
+									$order->error = __("Unknown error: Payment failed.", "pmpro");
 								
-								$order->error .= " A partial payment was made that we could not refund. Please contact the site owner immediately to correct this.";
+								$order->error .= " " . __("A partial payment was made that we could not refund. Please contact the site owner immediately to correct this.", "pmpro");
 							}
 							
 							return false;	
@@ -201,6 +201,9 @@
 						
 			if(empty($order->code))
 				$order->code = $order->getRandomCode();			
+			
+			//filter order before subscription. use with care.
+			$order = apply_filters("pmpro_subscribe_order", $order, $this);
 			
 			//taxes on the amount
 			$amount = $order->PaymentAmount;
@@ -444,4 +447,3 @@
 			return $httpParsedResponseAr;
 		}
 	}
-?>

@@ -26,7 +26,7 @@ CREATE TABLE `wp_pmpro_discount_codes` (
   UNIQUE KEY `code` (`code`),
   KEY `starts` (`starts`),
   KEY `expires` (`expires`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE `wp_pmpro_discount_codes_levels` (
   `expiration_period` enum('Day','Week','Month','Year') NOT NULL,
   PRIMARY KEY (`code_id`,`level_id`),
   KEY `initial_payment` (`initial_payment`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -65,7 +65,7 @@ CREATE TABLE `wp_pmpro_discount_codes_uses` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `timestamp` (`timestamp`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ CREATE TABLE `wp_pmpro_membership_levels` (
   KEY `allow_signups` (`allow_signups`),
   KEY `initial_payment` (`initial_payment`),
   KEY `name` (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -125,7 +125,7 @@ CREATE TABLE `wp_pmpro_membership_orders` (
   `accountnumber` varchar(32) NOT NULL DEFAULT '',
   `expirationmonth` char(2) NOT NULL DEFAULT '',
   `expirationyear` varchar(4) NOT NULL DEFAULT '',
-  `status` varchar(32) NOT NULL DEFAULT '',
+  `status` varchar(20) NOT NULL DEFAULT '',
   `gateway` varchar(64) NOT NULL,
   `gateway_environment` varchar(64) NOT NULL,
   `payment_transaction_id` varchar(64) NOT NULL,
@@ -133,15 +133,21 @@ CREATE TABLE `wp_pmpro_membership_orders` (
   `timestamp` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `affiliate_id` varchar(32) NOT NULL,
   `affiliate_subid` varchar(32) NOT NULL,
+  `notes` TEXT NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `code` (`code`),
-  KEY `session_id` (`session_id`),
-  KEY `user_id` (`user_id`),
-  KEY `membership_id` (`membership_id`),
-  KEY `timestamp` (`timestamp`),
-  KEY `gateway` (`gateway`),
-  KEY `gateway_environment` (`gateway_environment`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+   KEY `session_id` (`session_id`),
+	KEY `user_id` (`user_id`),
+	KEY `membership_id` (`membership_id`),
+	KEY `status` (`status`),
+	KEY `timestamp` (`timestamp`),
+	KEY `gateway` (`gateway`),
+	KEY `gateway_environment` (`gateway_environment`),
+	KEY `payment_transaction_id` (`payment_transaction_id`),
+	KEY `subscription_transaction_id` (`subscription_transaction_id`),
+	KEY `affiliate_id` (`affiliate_id`),
+	KEY `affiliate_subid` (`affiliate_subid`)
+);
 
 -- --------------------------------------------------------
 
@@ -155,7 +161,7 @@ CREATE TABLE `wp_pmpro_memberships_categories` (
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   UNIQUE KEY `membership_category` (`membership_id`,`category_id`),
   UNIQUE KEY `category_membership` (`category_id`,`membership_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -169,7 +175,7 @@ CREATE TABLE `wp_pmpro_memberships_pages` (
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   UNIQUE KEY `category_membership` (`page_id`,`membership_id`),
   UNIQUE KEY `membership_page` (`membership_id`,`page_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -178,22 +184,26 @@ CREATE TABLE `wp_pmpro_memberships_pages` (
 -- 
 
 CREATE TABLE `wp_pmpro_memberships_users` (
-  `user_id` int(11) unsigned NOT NULL,
-  `membership_id` int(11) unsigned NOT NULL,
-  `code_id` int(11) unsigned NOT NULL,
-  `initial_payment` decimal(10,2) NOT NULL,
-  `billing_amount` decimal(10,2) NOT NULL,
-  `cycle_number` int(11) NOT NULL,
-  `cycle_period` enum('Day','Week','Month','Year') NOT NULL DEFAULT 'Month',
-  `billing_limit` int(11) NOT NULL,
-  `trial_amount` decimal(10,2) NOT NULL,
-  `trial_limit` int(11) NOT NULL,
-  `startdate` datetime NOT NULL,
-  `enddate` datetime DEFAULT NULL,
-  `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`user_id`),
-  KEY `membership_id` (`membership_id`),
-  KEY `modified` (`modified`),
-  KEY `code_id` (`code_id`),
-  KEY `enddate` (`enddate`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+   `user_id` int(11) unsigned NOT NULL,
+   `membership_id` int(11) unsigned NOT NULL,
+   `code_id` int(11) unsigned NOT NULL,
+   `initial_payment` decimal(10,2) NOT NULL,
+   `billing_amount` decimal(10,2) NOT NULL,
+   `cycle_number` int(11) NOT NULL,
+   `cycle_period` enum('Day','Week','Month','Year') NOT NULL DEFAULT 'Month',
+   `billing_limit` int(11) NOT NULL,
+   `trial_amount` decimal(10,2) NOT NULL,
+   `trial_limit` int(11) NOT NULL,
+   `status` varchar(20) NOT NULL DEFAULT 'active',
+   `startdate` datetime NOT NULL,
+   `enddate` datetime DEFAULT NULL,
+   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   PRIMARY KEY (`id`),
+   KEY `membership_id` (`membership_id`),
+   KEY `modified` (`modified`),
+   KEY `code_id` (`code_id`),
+   KEY `enddate` (`enddate`),
+   KEY `user_id` (`user_id`),
+   KEY `user_id` (`status`)
+);

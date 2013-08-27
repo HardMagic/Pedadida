@@ -319,7 +319,7 @@ function bp_forums_total_topic_count() {
  *
  * @since BuddyPress (1.6)
  *
- * @param str $text The text of the comment
+ * @param string $text The text of the comment
  * @param int $topic_id The topic id
  * @param int $user_id The user id
  */
@@ -370,7 +370,7 @@ function bp_forums_reply_exists( $text = '', $topic_id = 0, $user_id = 0 ) {
  * @package BuddyPress
  *
  * @param int $user_id ID of the user being queried. Falls back on displayed user, then loggedin
- * @param str $type The current filter/sort type. 'active', 'popular', 'unreplied'
+ * @param string $type The current filter/sort type. 'active', 'popular', 'unreplied'
  * @return int $count The topic count
  */
 function bp_forums_total_topic_count_for_user( $user_id = 0, $type = 'active' ) {
@@ -456,7 +456,7 @@ function bp_forums_get_topic_extras( $topics ) {
 
 	// Get the topic ids
 	foreach ( (array) $topics as $topic ) $topic_ids[] = $topic->topic_id;
-	$topic_ids = $wpdb->escape( join( ',', (array) $topic_ids ) );
+	$topic_ids = implode( ',', wp_parse_id_list( $topic_ids ) );
 
 	// Fetch the topic's last poster details
 	$poster_details = $wpdb->get_results( "SELECT t.topic_id, t.topic_last_poster, u.user_login, u.user_nicename, u.user_email, u.display_name FROM {$wpdb->users} u, {$bbdb->topics} t WHERE u.ID = t.topic_last_poster AND t.topic_id IN ( {$topic_ids} )" );
@@ -590,7 +590,7 @@ function bp_forums_get_post_extras( $posts ) {
 
 	// Get the user ids
 	foreach ( (array) $posts as $post ) $user_ids[] = $post->poster_id;
-	$user_ids = $wpdb->escape( join( ',', (array) $user_ids ) );
+	$user_ids = implode( ',', wp_parse_id_list( $user_ids ) );
 
 	// Fetch the poster's user_email, user_nicename and user_login
 	$poster_details = $wpdb->get_results( "SELECT u.ID as user_id, u.user_login, u.user_nicename, u.user_email, u.display_name FROM {$wpdb->users} u WHERE u.ID IN ( {$user_ids} )" );

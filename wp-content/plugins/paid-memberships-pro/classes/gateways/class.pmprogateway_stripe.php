@@ -50,7 +50,7 @@
 				else
 				{
 					if(empty($order->error))
-						$order->error = "Unknown error: Initial payment failed.";
+						$order->error = __("Unknown error: Initial payment failed.", "pmpro");
 					return false;
 				}
 			}				
@@ -187,7 +187,7 @@
 				}
 				catch (Exception $e)
 				{
-					$order->error = "Error creating customer record with Stripe: " . $e->getMessage();
+					$order->error = __("Error creating customer record with Stripe:", "pmpro") . " " . $e->getMessage();
 					$order->shorterror = $order->error;
 					return false;
 				}
@@ -205,6 +205,9 @@
 			//create a code for the order
 			if(empty($order->code))
 				$order->code = $order->getRandomCode();
+			
+			//filter order before subscription. use with care.
+			$order = apply_filters("pmpro_subscribe_order", $order, $this);
 			
 			//setup customer
 			$this->getCustomer($order);
@@ -272,7 +275,7 @@
 			}
 			catch (Exception $e)
 			{
-				$order->error = "Error creating plan with Stripe:" . $e->getMessage();
+				$order->error = __("Error creating plan with Stripe:", "pmpro") . $e->getMessage();
 				$order->shorterror = $order->error;
 				return false;
 			}
@@ -288,7 +291,7 @@
 				$plan->delete();
 				
 				//return error
-				$order->error = "Error subscribing customer to plan with Stripe:" . $e->getMessage();
+				$order->error = __("Error subscribing customer to plan with Stripe:", "pmpro") . $e->getMessage();
 				$order->shorterror = $order->error;
 				return false;
 			}
@@ -337,7 +340,7 @@
 				catch(Exception $e)
 				{
 					$order->updateStatus("cancelled");	//assume it's been cancelled already
-					$order->error = "Could not find the subscription.";
+					$order->error = __("Could not find the subscription.", "pmpro");
 					$order->shorterror = $order->error;
 					return false;	//no subscription found	
 				}
@@ -347,10 +350,9 @@
 			}
 			else
 			{
-				$order->error = "Could not find the subscription.";
+				$order->error = __("Could not find the subscription.", "pmpro");
 				$order->shorterror = $order->error;
 				return false;	//no customer found
 			}						
 		}	
 	}
-?>

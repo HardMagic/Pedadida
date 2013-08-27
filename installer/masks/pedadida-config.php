@@ -1,9 +1,11 @@
 <?php
 
 // ** MySQL settings  - You can get this info from your web host ** //
+$third_party = 0;
 
 // Type of Database Used
 $pedidada_database_type = '{database_type}'; // 'pgsql', 'mysqli', 'mssql', 'sqlsrv' or 'oci'
+$use_mysqli = true;
 
 /** The name of the database for Pedadida */
 $pedadida_database_name = '{database}';
@@ -24,13 +26,13 @@ $pedadida_database_charset = '{charset}';
 $pedadida_database_collate = '{collate}';
 
 /** Optional Prefix for all Database Tables **/
-$pedadida_database_prefix    = '{dbprefix}'; 
+$pedadida_database_prefix    = '{dbprefix}';
 
 /** Database Port - Usually works to leave blank **/
-$pedadida_database_port     = '{dbport}'; 
+$pedadida_database_port     = '{dbport}';
 
 /** Database Port - Usually works to leave blank **/
-$pedadida_server_ip    = '{server_ip}'; 
+$pedadida_server_ip    = '{server_ip}';
 
 /** MORE SETTINGS YOU CAN CUSTOMIZE **/
 
@@ -85,14 +87,14 @@ $pedadida_library_secure = '{library_secure}'; // Using SSL for Library?
 $pedadida_email_notify = '{email_notify}';
 
 // Paths used in Library - Can be modified in Library Config to override these settings
-$pedadida_imagemagick_path = '{imagemagick_path}'; 
-$pedadida_ffmpeg_path = '{ffmpeg_path}'; 
+$pedadida_imagemagick_path = '{imagemagick_path}';
+$pedadida_ffmpeg_path = '{ffmpeg_path}';
 $pedadida_exiftool_path='{exiftool_path}';
 $pedadida_antiword_path='{antiword_path}';
 $pedadida_ghostscript_path='{ghostscript_path}';
 
 // Default Language
-$pedadida_language = '{language}'; 
+$pedadida_language = '{language}';
 
 # To be able to run certain actions asyncronus (eg. preview transcoding), define the path to php:
  $pedadida_php_path="/usr/local/bin";

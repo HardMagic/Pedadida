@@ -4,6 +4,7 @@
 
 // Type of Database Used
 $pedidada_database_type = 'mysqli'; // 'pgsql', 'mysqli', 'mssql', 'sqlsrv' or 'oci'
+$use_mysqli = true;
 
 /** The name of the database for Pedadida */
 $pedadida_database_name = '';

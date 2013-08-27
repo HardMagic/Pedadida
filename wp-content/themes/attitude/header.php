@@ -83,13 +83,14 @@ reverse: true}, true, true);
 	
     <div data-role="panel" id="leftpanel" class="slogan" data-position="left" data-display="reveal">
         <ul data-role="listview" data-theme="c" data-divider-theme="c" data-icon="true" data-global-nav="demos" class="jqm-list">
-            <li data-role="list-divider">jQuery Mobile Demos</li>
+            <li data-role="list-divider">Pedadida</li>
 			<li><a href="./">Home</a></li>
-            <li><a href="intro/">Introduction</a></li>
-            <li><a href="examples/">Demo Showcase</a></li>
-            <li><a href="faq/">Questions & Answers</a></li>
-			<li><a href="intro/rwd.html">Going Responsive</a></li>
-            <li data-role="list-divider">Widget reference</li>
+            <li><a href="intro/">Classroom</a></li>
+            <li><a href="examples/">Lab</a></li>
+            <li><a href="faq/">Media Library</a></li>
+			<li><a href="intro/rwd.html">Discussion Board</a></li>
+			<hr>
+            <li data-role="list-divider">My Profile</li>
 <li data-section="Widgets" data-filtertext="accordions collapsible sets content formatting grouped inset mini"><a href="widgets/accordions/">Accordion</a></li>
 
 <li data-section="Widgets" data-filtertext="ajax navigation navigate event method"><a href="widgets/navigation/" data-ajax="false">AJAX Navigation</a></li>

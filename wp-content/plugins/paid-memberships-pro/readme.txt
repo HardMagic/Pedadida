@@ -1,64 +1,187 @@
 === Paid Memberships Pro ===
 Contributors: strangerstudios
-Tags: memberships, ecommerce, authorize.net, paypal, stripe
+Tags: memberships, membership, authorize.net, ecommerce, paypal, stripe, braintree, restrict access, restrict content, directory site, payflow
 Requires at least: 3.0
-Tested up to: 3.5.1
-Stable tag: 1.6.1
+Tested up to: 3.6
+Stable tag: 1.7.1
 
-A customizable Membership Plugin for WordPress integrated with Authorize.net or PayPal(r) for recurring payments, flexible content control, themed registration, checkout, and more ...
-
+The easiest way to GET PAID with your WordPress site. Flexible content control by Membership Level, Reports, Affiliates and Discounts integrated with Stripe, Authorize.net, PayPal(r) or Braintree for recurring payments.
 
 == Description ==
-Paid Memberships Pro is a WordPress Plugin and support community for membership site curators. PMPro's rich feature set allows you to add a new revenue source to your new or current blog or website and is flexible enough to fit the needs of almost all online and offline businesses.
+Set up unlimited membership levels and provide restricted access to pages, posts, categories, videos, forums, downloads, support, single "a la carte" page access, and more. Paid Memberships Pro is flexible enough to fit the needs of almost all online and offline businesses. It works great out of the box, but is easy for developers to customize to fit your needs.
 
-Accept one-time and recurring payments using Stripe, PayPal Website Payments Pro, PayPal Express, or Authorize.net.
+Paid Memberships Pro is the community solution for adding paid memberships to your WordPress site. PMPro is 100% GPL. All code, including add-ons, is available for free from the WordPress repository here or on our site at http://www.paidmembershipspro.com. This version in the WordPress repository is the full version of the plugin with no restrictions or additional licenses required. Developers should get involved at [our GitHub page](https://github.com/strangerstudios/paid-memberships-pro/).
+
+**Integrate with The Most Popular Payment Gateways.**
+
+Stripe, Authorize.net, Braintree Payments, and PayPal (Standard, Express, Website Payments Pro, Payflow, & Advanced)
+
+**Works with Any Theme You Want.**
+
+Your Existing Theme or a Popular Free or Premium Third-Party Theme.
+
+
+**Infinitely Configurable, Unlimited Membership Levels.**
+Set up the membership levels that best fit your business, whether they are Free, Paid, or Subscriptions (Annual, Monthly, Weekly, Daily). Offer Custom Trial Periods (Free Trial, Custom-length Trial, 'Introductory' Pricing)
+
+**Easy-to-Use Admin Pages and Settings.**
+
+1. Membership Access by Page/Post/Category.
+
+2. Members List with CSV Export
+
+3. Easy Payment Gateway Setup with testing mode.
+
+4. Ever expanding list of Membership Reports
+
+5. Membership Discounts with customizable price rules. 
+
+**Control the User-Experience from Start to Finish.**
+
+Your members can update their billing information or cancel their account directly on your site. Any active subscription will be cancelled at the payment gateway for you.
+
+**Integrate with Top Third Party Tools.**
+
+PMPro integrates with Mailchimp, Infusionsoft, Post Affiliate Pro, and many more popular third party tools.
+
+**Free Add-ons to Customize and Extend PMPro.**
+
+Extensions, sister plugins, and other bits of code to customize your implementation and help you integrate with 3rd party services or other plugins. All open source and available for free under the GPL v2 license.
+
+[View the PMPro Add-Ons](http://www.paidmembershipspro.com/add-ons/)
 
 == Installation ==
 
-1. Upload the `paid-memberships-pro` directory to the `/wp-content/plugins/` directory of your site.
-1. Activate the plugin through the 'Plugins' menu in WordPress.
-1. Follow the instructions in the video here:
+**Download, Install and Activate!**
 
-http://www.paidmembershipspro.com/documentation/initial-plugin-setup/tutorial-video/
+1. Download the latest version of the plugin.
 
-Written instructions:
-http://www.paidmembershipspro.com/support/initial-plugin-setup/
+2. Unzip the downloaded file to your computer.
+
+3. Upload the /paid-memberships-pro/ directory to the /wp-content/plugins/ directory of your site.
+
+4. Activate the plugin through the 'Plugins' menu in WordPress.
+
+**Complete the Initial Plugin Setup**
+
+The plugin will walk you through initial setup - basic steps are outlined below. You can [watch a video tutorial here](http://www.paidmembershipspro.com/documentation/initial-plugin-setup/tutorial-video/).
+
+1. Add one or more Membership Levels
+
+2. Set up the PMPro Pages
+
+3. Configure your Payment Gateway and SSL
+
+4. Customize Email Settings
+
+5. Review Advanced Settings (best left untouched).
+
+[Written instructions on initial plugin setup are available here](http://www.paidmembershipspro.com/support/initial-plugin-setup/).
 
 == Frequently Asked Questions ==
 
-= My site is broken or blank or not letting me log in after activating Paid Memberships Pro =
+= I need help installing, configuring, or customizing the plugin. =
+Please visit [our premium support site at http://www.paidmembershipspro.com](http://www.paidmembershipspro.com) for more documentation and our support forums.
 
+= I found a bug in the plugin. =
+Please post it in the [WordPress support forum](http://wordpress.org/tags/paid-memberships-pro?forum_id=10) and we'll fix it right away. Thanks for helping. 
+
+= My site is broken or blank or not letting me log in after activating Paid Memberships Pro =
 This is typically caused by a conflict with another plugin that is trying to redirect around the login/register pages or trying to redirect from HTTP to HTTPS, etc.
 
 To regain access to your site, FTP to your site and rename the wp-content/plugins/paid-memberships-pro folder to wp-content/plugins/paid-memberhsips-pro-d (or anything different). Now WP will not be able to find PMPro, and you can gain access to /wp-admin/ again. From there, visit the plugins page to fully deactivate Paid Memberships Pro. (You'll want to rename the folder back to paid-memberhsips-pro again.)
 
 Long term, you will need to find and fix the conflict. We can usually do this for you very quickly if you sign up for support at http://www.paidmembershipspro.com/pricing/ and send us your WP admin and FTP credentials.
 
-= I found a bug in the plugin. =
-
-Please post it in the WordPress support forum and we'll fix it right away. Thanks for helping. http://wordpress.org/tags/paid-memberships-pro?forum_id=10
-
-= I need help installing, configuring, or customizing the plugin. =
-
-Please visit our premium support site at http://www.paidmembershipspro.com for more documentation and our support forums.
-
 = Does PMPro Support Multisite/Network Installs? =
-
 "Supporting multisite" means different things to different people.
 
 Out of the box PMPro will basically act as a stand alone plugin for each site. Each site has its own list of membership levels, members, payment settings, etc.
 
-I've written a plugin pmpro-network, which is available on GitHub (https://github.com/strangerstudios/pmpro-network) that shows the basics for allowing users who signs up for a membership at one site to be able to create or reclaim their own site under the multisite setup.
+I've written a plugin [PMPro-Network](http://www.paidmembershipspro.com/add-ons/plugins-on-github/pmpro-network-multisite-membership/) that shows the basics for allowing users who signs up for a membership at one site to be able to create or reclaim their own site under the multisite setup. It's powerful stuff.
 
 If you would like more help using PMPro on a network install, sign up for support at http://www.paidmembershipspro.com.
 
+= Does PMPro Support X? =
+
+Not sure? You can find out by doing a bit a research.
+
+1. [Check our compatibility page](http://www.paidmembershipspro.com/compatibility/).
+
+2. [Check our add ons](http://www.paidmembershipspro.com/add-ons/).
+
+3. [Do a search on our site](http://www.paidmembershipspro.com/).
+
+4. [Ask in the forums here](http://wordpress.org/tags/paid-memberships-pro?forum_id=10).
+
 == Screenshots ==
 
-1. Paid Memberships Pro supports multiple membership levels.
-2. On-site checkout via Authorize.net or PayPal Website Payments Pro. (Off-site checkout coming soon.)
-3. Use Discount Codes to offer access at lower prices for special customers.
+1. Set up the membership levels that best fit your business, whether they are Free, Paid, or Subscriptions (Annual, Monthly, Weekly, Daily). Offer Custom Trial Periods (Free Trial, Custom-length Trial, 'Introductory' Pricing)
+2. Easy to use Membership Access Settings by Page, Post, or Category. Shortcodes to display restricted content inline. Developer-friendly hooks to restrict access any way you need.
+3. Members are WordPress Users. PMPro provides a unique interface to view, filter and search Members or export your Members List.
+4. Offer Membership Discounts with specific price rules (restricted by level, unique pricing for each level, # of uses, expiration date.)
 
 == Changelog == 
+= 1.7.1 =
+* Design updates to frontend and backend pages.
+* Added Sales and Revenue Report.
+* Fix to Braintree webhook that should help get it verified by Braintree more easily.
+* Fix to PayPal IPNHandler to check both that either the primary or the business email address sent from PayPal matches the one stored in the payment settings.
+* Added pmpro_ajax_timeout hook to change the timeout limit from 2000 (2 seconds) to something else.
+* Fixed bug that occurred when the pmpro_register_redirect filter returned false or a blank link. Thanks, Vladimir Garagulya.
+* Added pmpro_paypal_standard_nvpstr and pmpro_set_express_checkout_nvpstr filters to change or add parameters to an name-value-pair string sent to PayPal in a couple cases.
+* Fixed checkout failure on Free level when in mySQL Strict Mode. (Thanks, inator on GitHub)
+* Only checking pmpro_checkForUpgrades in admin/dashboard now. (Thanks, topdown on GitHub)
+* No longer loading recaptcha library in the admin. Also wrapped the recaptchalib require in an init function to delay it a bit so we can check if other plugins have already loaded it.
+* PMPro-Mailchimp and WP-Bouncer have been moved into the WP repository. Other Add-on updates.
+* New users will now be set to the "default role" set in the General settings instead of spefically "subscriber". (Subscriber is the default default role though.) Thanks, Nabil Kadimi.
+* Wrapped strings in login report for translation.
+* Added indexes to the following columns in the pmpro_membership_orders table: status, payment_transaction_id, subscription_transaction_id, affiliate_id, affiliate_subid
+
+= 1.7.0.4 =
+* Another database fix for new installs.
+
+= 1.7.0.3 =
+* Fixed a performance issue added in 1.7.0.2.
+
+= 1.7.0.2 =
+* Fixed HUGE issue with the DB setup on fresh 1.7+ installs. If you installed version 1.7 or 1.7.0.1 fresh (not upgraded from earlier version) then PMPro will not work until you upgrade to version 1.7.0.2.
+* Removed from old PHP short tag use
+* Fixed generation of members only and non-logged in text on new installs.
+
+= 1.7.0.1 =
+* Added the redirect away from wp-login.php page (was accidentally removed in version 1.7).
+* Added support for Theme My Login versions 6.3+
+* Fixed CSV downloads.
+* Fixed some warnings.
+* Fixed generation of cost text when using built in tax.
+* Added "pmpro_subscribe_order" filter.
+* Added an index to the user_id column of pmpro_memberships_users table which will help with performance of the new logins report and other user search functions.
+
+= 1.7 =
+* Ready for localization efforts.
+* Addons tab in PMPro Settings in the dashboard.
+* Reports page in dashboard with login report.
+* Webhook code for Braintree Payments gateway.
+* If PayPal Standard is the active gateway, users without membership levels will be able to see the confirmation page with a message that PayPal is processing payment.
+* Fixed bug where PayPal recurring orders were being attributed to the wrong user (if no subscriber id was attached to the IPN message).
+* Fixed bug where users sometimes couldn't checkout with a discount code that made a level free.
+* Cleaned up code in base paid-memberships-pro.php file.
+* Updated the .pmpro_checkout tr.odd td line in frontend.css to use rgba with alpha transparency to work a bit better on dark background themes.
+* Fixed bug where a user's first_name and last_name meta fields might be overwritten by the billing name fields at checkout. It will still set them if the user's first and last name fields are blank. (Thanks, John Hamlin.)
+* Fixed bug where zipcode was shown instead of state in the members list CSV export. (Thanks, John Hamlin.)
+* Fix to show discount codes on free trial confirmation emails if one was used.
+* Added the pmpro_random_code filter so you can hook in and change invoice code/etc generation.
+* Correctly padding zeroes on credit card expiration dates like 09/2013 when using Stripe. This SQL statement should fix broken entries in your orders table: NOTE (1) Backup your database first. NOTE (2) Make sure you change the table name to match your WP prefix,etc. >>> UPDATE wp_pmpro_membership_orders SET expirationyear = CONCAT(SUBSTRING(expirationmonth,2,1), expirationyear), expirationmonth= CONCAT('0', SUBSTRING(expirationmonth,1,1)) WHERE expirationmonth > 12;
+* Wrapped some AJAX and service calls code in init() functions so they will more consistently work with hooks/filters. (Before if PMPro loaded before a plugin or bit of code that added filters/etc, the filters wouldn't get applied.)
+* Fixed Stripe JS to also send city to Stripe. (This is important because Stripe doesn't seem to show the address at all if the city is missing.)
+* Added 'pmpro_members_list_sql' hook to filter the SQL used on the members list page and CSV export.
+* Added 'pmpro_members_list_csv_heading' and 'pmpro_members_list_csv_default_columns' hooks to filter the default columns in the members list CSV. (e.g. to check role and remove columns)
+* Added 'pmpro_members_list_user_link' hook to filter the link and username displayed on the members list page. (e.g. to check role and remove link to edit user)
+* Checking that "status='active'" when finding subscriptions to cancel when deleting a level. This will keep PMPro from trying to cancel someone more than once... or trying to cancel inactive subscriptions.
+* Fixed bug where Sales Tax fields were hidden on the payment settings page if Stripe was chosen as the gateway.
+* No longer logging IPN activity to logs/ipn.txt by default. (Uncomment the lines at the bottom of services/ipnhandler.php to use the log to debug.)
+
 = 1.6.1 =
 * Added recurring billing support to Payflow integration.
 * Fixed bug where an order's code was shown instead of the subscription ID on the edit order page.

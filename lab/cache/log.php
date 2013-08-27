@@ -240,3 +240,211 @@ Session "default" started at 2013-05-29T21:05:04+0000
 #5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
 Time since start: 6.1083679199219 seconds
 -------------------------------------------------------------------------------
+
+Session "default" started at 2013-06-16T16:50:01+0000
+#1 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#2 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#3 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#4 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+Time since start: 6.7254610061646 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-06-16T16:51:50+0000
+#1 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#2 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#3 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#4 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+Time since start: 6.4846060276031 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-07-22T22:27:20+0000
+#1 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#2 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#3 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#4 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#5 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+Time since start: 7.0789511203766 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:44:47+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.16098093986511 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:44:47+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+#2 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#3 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#4 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#5 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#6 ERROR: Error: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\application\functions.php' on line 36 (error code: 8192)
+#7 ERROR: Error: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\wp-includes\wp-db.php' on line 1141 (error code: 8192)
+#8 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+Time since start: 1.8528940677643 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:04+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.085241079330444 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:04+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+#2 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#3 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#4 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#5 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#6 ERROR: Error: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\application\functions.php' on line 36 (error code: 8192)
+#7 ERROR: Error: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\wp-includes\wp-db.php' on line 1141 (error code: 8192)
+#8 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+Time since start: 1.9777331352234 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:06+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.22639608383179 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:07+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.089775085449219 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:07+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.12784004211426 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:07+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.085687160491943 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:07+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.08043098449707 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:07+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.098046064376831 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:07+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.11748313903809 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:07+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.097144842147827 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:08+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.079663038253784 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:08+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.13481307029724 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:08+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.16778516769409 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:08+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.17611813545227 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-26T22:46:08+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.29590797424316 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:28+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.12288904190063 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:28+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+#2 ERROR: Error: Constant DB_NAME already defined in 'D:\web\htdocs\wp-config.php' on line 20 (error code: 8)
+#3 ERROR: Error: Constant DB_USER already defined in 'D:\web\htdocs\wp-config.php' on line 23 (error code: 8)
+#4 ERROR: Error: Constant DB_HOST already defined in 'D:\web\htdocs\wp-config.php' on line 29 (error code: 8)
+#5 ERROR: Error: Constant DB_CHARSET already defined in 'D:\web\htdocs\wp-config.php' on line 32 (error code: 8)
+#6 ERROR: Error: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\application\functions.php' on line 36 (error code: 8192)
+#7 ERROR: Error: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\wp-includes\wp-db.php' on line 1141 (error code: 8192)
+#8 ERROR: Error: unserialize(): Error at offset 284 of 346 bytes in 'D:\web\htdocs\wp-includes\functions.php' on line 232 (error code: 8)
+Time since start: 2.0198740959167 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:30+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.24129605293274 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:30+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.077806949615479 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:30+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.094628095626831 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:30+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.096506834030151 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:31+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.078480005264282 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:31+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.094765186309814 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:31+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.093575954437256 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:31+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.08270001411438 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:31+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.071590900421143 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:31+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.19258809089661 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:31+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.22751998901367 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:31+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.21861600875854 seconds
+-------------------------------------------------------------------------------
+
+Session "default" started at 2013-08-27T00:34:31+0000
+#1 ERROR: Error: mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in 'D:\web\htdocs\lab\environment\library\database\adapters\MysqlDBAdapter.class.php' on line 28 (error code: 8192)
+Time since start: 0.23664689064026 seconds
+-------------------------------------------------------------------------------
