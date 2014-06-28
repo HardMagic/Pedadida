@@ -22,6 +22,9 @@ You should have received a copy of the GNU General Public License
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 // INCLUDE ALL FILES
+
+require_once('login_form.php');
+
 // INCLUDE LOGIN FORM CUSTOMIZATION HERE
 
 // THIS AREA CHECKS IF USER HAS AN ACCOUNT
@@ -42,6 +45,7 @@ You should have received a copy of the GNU General Public License
 			
 			//IF THEY ARE LOGGED IN
 				//DO THEY NEED A CREDIT CARD
+				   require_once('credit_card.php');
 
 					//THIS IS THE AREA IF THEY HAVE A CREDIT CARD
 					
