@@ -58,7 +58,7 @@ require_once('login_form.php');
 
 
 		//THIS IS THE AREA TO CREATE AN ACCOUNT
-		
+		// test
 		
 			//THIS IS THE AREA FOR WP CREATE ACCOUNT HOOK
 			
