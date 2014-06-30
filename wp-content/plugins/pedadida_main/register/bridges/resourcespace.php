@@ -19,36 +19,30 @@ Info needed to add is at bottom.
     $wpdb->insert( 
     	'user', 
     	array( 
-    	    'id_member' => $user_id,
-    		'member_name' => $info->user_login, 
-    		'email_address' => $info->user_email,
-    		'passwd' => $info->user_pass, 
-    		'real_name' => $info->first_name . " " . $info->last_name
+    	    'ref' => $user_id,
+    	    'username' => $info->user_login, 
+    		'password' => $info->user_pass, 
+    		'fullname' => $info->first_name . " " . $info->last_name,
+    		'email' => $info->user_email,
+    		'usergroup' => $info->user_pass,
+    		'last_active' => $info->user_pass, 
+    		'logged_in' => $info->user_login, 
+    		'last_browser' => $info->user_pass, 
+    		'last_ip' => $info->user_pass, 
+    		'current_collection' => $info->user_pass, 
+    		'accepted_terms' => $info->user_pass,  
+    		'account_expires' => $info->user_pass,  
+    		'comments' => $info->user_pass,  
+    		'session' => $info->user_pass,  
+    		'ip_restrict' => $info->user_pass, 
+    		'password_last_change' => $info->user_pass, 
+    		'login_tries' => $info->user_pass, 
+    		'login_last_try' => $info->user_pass, 
+    		'approved' => $info->user_pass, fo->user_email,
+    		'lang' => $info->user_pass, 
+    		'created' => $info->user_pass
     	));
     
-
-`ref` ,
-				`username` ,
-				`password` ,
-				`fullname` ,
-				`email` ,
-				`usergroup` ,
-				`last_active` ,
-				`logged_in` ,
-				`last_browser` ,
-				`last_ip` ,
-				`current_collection` ,
-				`accepted_terms` ,
-				`account_expires` ,
-				`comments` ,
-				`session` ,
-				`ip_restrict` ,
-				`password_last_change` ,
-				`login_tries` ,
-				`login_last_try` ,
-				`approved` ,
-				`lang` ,
-				`created`
 
 
 
@@ -88,35 +82,8 @@ Info needed to add is at bottom.
 					$created="CURRENT_TIMESTAMP";
 				}
 				
-				// FIND OUT WHICH GROUP USER IS IN 
-				if($usergroup == 1) // GENERAL
 			
-		
 						
-						$new_user = mysql_query("INSERT INTO `user` (
-				`ref` ,
-				`username` ,
-				`password` ,
-				`fullname` ,
-				`email` ,
-				`usergroup` ,
-				`last_active` ,
-				`logged_in` ,
-				`last_browser` ,
-				`last_ip` ,
-				`current_collection` ,
-				`accepted_terms` ,
-				`account_expires` ,
-				`comments` ,
-				`session` ,
-				`ip_restrict` ,
-				`password_last_change` ,
-				`login_tries` ,
-				`login_last_try` ,
-				`approved` ,
-				`lang` ,
-				`created`
-				)
-				VALUES (
+					
 
 NULL , '$username', '$password', '$fullname', '$email', '$usergroup', '$last_active', '1', NULL, '$last_ip', '3', '$accepted_terms', NULL, '', '', '', '0', '0', NULL , '$approved', '$lang' , CURRENT_TIMESTAMP )") or die(mysql_error());
