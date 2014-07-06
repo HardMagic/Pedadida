@@ -19,6 +19,14 @@ NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0');
 INSERT INTO `prana_shama`.`fo_objects` (`id`, `object_type_id`, `name`, `created_on`, `created_by_id`, `updated_on`, `updated_by_id`, 
 `trashed_on`, `trashed_by_id`, `archived_on`, `archived_by_id`) VALUES (NULL, '', 'nn', '0000-00-00 00:00:00', NULL, '0000-00-00 00:00:00',
 NULL, '0000-00-00 00:00:00', NULL, '0000-00-00 00:00:00', NULL);
+
+
+INSERT INTO `prana_shama`.`fo_members` (`id`, `dimension_id`, `object_type_id`, `parent_member_id`, `depth`, `name`, `object_id`, `color`, 
+`archived_on`, `archived_by_id`) VALUES (NULL, '4', '4', '2', '', '4', '4', '0', '0000-00-00 00:00:00', NULL);
+
+INSERT INTO `prana_shama`.`fo_contact_passwords` (`id`, `contact_id`, `password`, `password_date`) VALUES (NULL, '', '', '');
+
+INSERT INTO `prana_shama`.`fo_contact_permission_groups` (`contact_id`, `permission_group_id`) VALUES ('', '');
 */
 
 $wpdb->insert( 
