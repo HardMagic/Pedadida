@@ -60,7 +60,7 @@ if(!is_bool($config_is_set) || !$config_is_set) {
 // ---------------------------------------------------
 //  config.php + extended config
 // ---------------------------------------------------
-require_once('/../../pedadida-config.php');
+require_once(__DIR__.'/../pedadida-config.php');
 if (!defined('FILES_DIR')) define('FILES_DIR', ROOT . '/upload'); // place where we will upload project files
 define('PRODUCT_NAME', $pedadida_lab_name);
 define('PRODUCT_URL', $pedadida_lab_base);
@@ -160,6 +160,7 @@ if(Env::isDebugging()) {
 } // if
 
 
+
 if(isset($_GET['a'])){
 if($_GET['a'] == 'login')
 {
@@ -167,21 +168,31 @@ if($_GET['a'] == 'login')
 $third_party = 1;
 define('WP_USE_THEMES', false);
 require_once(__DIR__.'/../wp-blog-header.php');
+
 if ( is_user_logged_in() ) {
    $current_user = wp_get_current_user(); 
-$_SESSION["id"] = $current_user->ID;
-ajx_current("empty");
-$user = Contacts::getByUsername($current_user->user_login, owner_company());
 
-		try {
-			CompanyWebsite::instance()->logUserIn($user, 0);
-		} catch(Exception $e) {
-			flash_error(lang('invalid login data'));
-			return;
-		} // try
-} else {
+   $sql = "SELECT object_id  FROM fo_contacts WHERE username = '$current_user->user_login'";
+   $results = $wpdb->get_results($sql) or die(mysql_error());
+
+    foreach( $results as $result ) {
+        $feng_id = $result->object_id;
+    }
 	
-$actual_link = full_url();
+	   
+	$_SESSION["id"] = $feng_id;
+	ajx_current("empty");
+	$user = Contacts::getByUsername($current_user->user_login, owner_company());
+
+			try {
+				CompanyWebsite::instance()->logUserIn($user, 0);
+			} catch(Exception $e) {
+				flash_error(lang('invalid login data'));
+				return;
+			} // try
+} 
+else {
+	$actual_link = site_url( '/lab/ ' );
     wp_redirect( wp_login_url( $actual_link  )  );
 }
 
