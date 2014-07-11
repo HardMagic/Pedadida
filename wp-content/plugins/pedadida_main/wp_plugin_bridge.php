@@ -58,8 +58,9 @@ define( 'PEDADIDA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 				
 	//LOGIN AREA
 		//IF THEY ARE NOT LOGGED IN
-		add_action('wp_login', 'pedadida_logins');
-		function pedadida_logins() {
+		add_action('wp_login', 'pedadida_logins', 10, 2);
+		
+		function pedadida_logins($user_login, $user) {
 
 		//THIS IS THE AREA FOR MOODLE HOOK
         require_once( PEDADIDA_PLUGIN_PATH . 'login/bridges/moodle.php');

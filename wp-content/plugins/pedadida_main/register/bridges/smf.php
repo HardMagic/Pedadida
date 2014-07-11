@@ -18,6 +18,17 @@ INSERT INTO smf_members (id_member, member_name, email_address, passwd)
 
 
 */
+
+/*
+    require_once( PEDADIDA_PLUGIN_PATH . 'toolkit/SmfRestClient.php');
+    
+    require_once(ABSPATH . '/pedadida-config.php');
+    
+    $smf_api = new SmfRestClient($pedadida_key1);
+    
+    $smf_api->register_member($regOptions = array())
+*/  
+    
     
     $wpdb->insert( 
     	'smf_members', 

@@ -8,5 +8,7 @@
     $smf_api = new SmfRestClient($pedadida_key1);
 
     $smf_api->login_user($user_login);
+    
+
 
 ?>
