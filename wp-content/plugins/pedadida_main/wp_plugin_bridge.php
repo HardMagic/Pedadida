@@ -74,6 +74,7 @@ define( 'PEDADIDA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 		       
         }
 		//IF THEY ARE LOGGED IN
+		
 			//DO THEY NEED A CREDIT CARD
 			   require_once( PEDADIDA_PLUGIN_PATH . 'credit_card.php');
 
