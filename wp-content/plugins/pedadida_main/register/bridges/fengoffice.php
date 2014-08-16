@@ -15,6 +15,7 @@ INSERT INTO `prana_shama`.`fo_contact_permission_groups` (`contact_id`, `permiss
 INSERT INTO `prana_shama`.`fo_contact_member_permissions` (`permission_group_id`, `member_id`,
 `object_type_id`, `can_write`, `can_delete`) VALUES ('345235', '', '', '0', '0') ON DUPLICATE KEY UPDATE ();
 
+INSERT INTO `prana_shama`.`fo_contact_passwords` (`id`, `contact_id`, `password`, `password_date`) VALUES (NULL, '', '', '');
 
 INSERT INTO `prana_shama`.`fo_contacts` (`object_id`, `first_name`, `surname`, `is_company`, `company_id`, `department`, `job_title`, 
 `birthday`, `timezone`, `user_type`, `is_active_user`, `token`, `salt`, `twister`, `display_name`, `permission_group_id`, `username`, 
@@ -31,7 +32,6 @@ NULL, '0000-00-00 00:00:00', NULL, '0000-00-00 00:00:00', NULL);
 INSERT INTO `prana_shama`.`fo_members` (`id`, `dimension_id`, `object_type_id`, `parent_member_id`, `depth`, `name`, `object_id`, `color`, 
 `archived_on`, `archived_by_id`) VALUES (NULL, '4', '4', '2', '', '4', '4', '0', '0000-00-00 00:00:00', NULL);
 
-INSERT INTO `prana_shama`.`fo_contact_passwords` (`id`, `contact_id`, `password`, `password_date`) VALUES (NULL, '', '', '');
 
 INSERT INTO `prana_shama`.`fo_contact_dimension_permissions` (`permission_group_id`, 
 `dimension_id`, `permission_type`) VALUES ('234', '', NULL);
@@ -53,7 +53,7 @@ if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'fo_contacts'"))==1)
       $wpdb->replace( 
     	'fo_contact_member_permissions', 
     	array( 
-            'permission_group_id' => 17,
+            'permission_group_id' => '17',
     		'member_id' => $user_id, 
     		'object_type_id' => $x,
     		'can_write' => '1', 
@@ -78,32 +78,32 @@ if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'fo_contacts'"))==1)
     	'fo_members', 
     	array( 
     	    'id' => $user_id, 
-    	    'dimension_id' => $user_id, 
-    		'object_type_id' => 'manual',
-    		'parent_member_id' => 'manual',
-    		'depth' => 'manual',
+    	    'dimension_id' => '1', 
+    		'object_type_id' => '20',
+    		'parent_member_id' => '1',
+    		'depth' => '2',
     		'name' => 'manual',
-    		'object_id' => 'manual',
-    		'color' => 'manual',
-    		'archived_on' => 'manual',
-    		'archived_by_id' => 'manual'
+    		'object_id' => $user_id,
+    		'color' => '1',
+    		'archived_on' => '0000-00-00 00:00:00',
+    		'archived_by_id' => '0'
     	));
     
-
+    $fengdate = date("Y-m-d H:i:s");
+    
     $wpdb->insert( 
     	'fo_objects', 
     	array( 
-    	    'id' => $user_id, 
-    	    'object_type_id' => $user_id, 
-    		'name' => 'manual',
-    		'created_on' => 'manual',
-    		'created_by_id' => 'manual',
-    		'updated_on' => 'manual',
-    		'updated_by_id' => 'manual',
-    		'trashed_on' => 'manual',
-    		'trashed_by_id' => 'manual',
-    		'archived_on' => 'manual',
-    		'archived_by_id' => 'manual'
+    	    'object_type_id' => '15', 
+    		'name' => $info->user_login,
+    		'created_on' =>  $fengdate,
+    		'created_by_id' => '0',
+    		'updated_on' =>  $fengdate,
+    		'updated_by_id' => '0',
+    		'trashed_on' => '0000-00-00 00:00:00',
+    		'trashed_by_id' => '0',
+    		'archived_on' => '0000-00-00 00:00:00',
+    		'archived_by_id' => '0'
     	));
     
 
@@ -138,6 +138,11 @@ if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'fo_contacts'"))==1)
     		'default_billing_id' => 'manual'
     		
     	));
+/*
+        foreach( $wpdb->get_results("SELECT * FROM your_table_name WHERE id LIKE' . $id . ';") as $key => $row) {
+        // each column in your row will be accessible like this
+        $my_column = $row->column_name;}
+*/
 
 }
 
