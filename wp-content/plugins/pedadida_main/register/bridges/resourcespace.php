@@ -1,18 +1,6 @@
 <?php
 /* 
 
-Variables to be used
-
-$user_id = ID
-$info->user_login = User Name
-$info->user_pass = User Password
-$info->user_email = Email
-$info->first_name = First Name
-$info->last_name = Last Name
-
-
-Info needed to add is at bottom.
-
 
 */
 
