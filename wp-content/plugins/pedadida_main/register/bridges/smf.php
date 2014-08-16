@@ -29,7 +29,7 @@ INSERT INTO smf_members (id_member, member_name, email_address, passwd)
     $smf_api->register_member($regOptions = array())
 */  
     
-    if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'smf_members'"))==1) 
+    if($wpdb->get_var("SHOW TABLES LIKE 'smf_members'") == 'smf_members') 
     $wpdb->insert( 
     	'smf_members', 
     	array( 

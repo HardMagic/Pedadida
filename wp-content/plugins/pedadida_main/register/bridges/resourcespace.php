@@ -5,7 +5,7 @@
 */
 
 //NO TIME VARIABLE
-if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'user'"))==1) 
+if($wpdb->get_var("SHOW TABLES LIKE 'user'") == 'user') 
 {
 $no_time="0000-00-00 00:00:00";
     

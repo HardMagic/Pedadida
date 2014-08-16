@@ -1,6 +1,6 @@
 <?php
 
-if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'fo_contacts'"))==1) 
+if($wpdb->get_var("SHOW TABLES LIKE 'fo_contacts'") == 'fo_contacts') 
 {
     
 $fengdate = date("Y-m-d H:i:s");

@@ -1,6 +1,6 @@
 <?php
-
-if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'mdl_users'"))==1) 
+global $wpdb;
+if($wpdb->get_var("SHOW TABLES LIKE 'mdl_users'") == 'mdl_users') 
 $wpdb->insert( 
     	'mdl_users', 
     	array( 

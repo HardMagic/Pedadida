@@ -15,7 +15,8 @@ Info needed to add:
  
  Look in One Note to get all fields
 */
-    if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'se_users'"))==1) 
+    if($wpdb->get_var("SHOW TABLES LIKE 'se_users'") == 'se_users')
+    {
     $wpdb->insert( 
     	'se_users', 
     	array( 
@@ -170,3 +171,4 @@ INSERT INTO `themov_2nd`.`se_profilevalues` (`profilevalue_id`, `profilevalue_us
 `profilevalue_32`, `profilevalue_33`, `profilevalue_34`, `profilevalue_35`, `profilevalue_36`) 
 VALUES (NULL, '9876543', '', '', '0000-00-00', '-1', '', NULL, NULL, '', '', NULL, NULL, '', '', NULL, '-1', '-1', '', '', '', '-1', '', '', '', '', '', NULL, NULL, NULL, '', '', '');
 */
+}
