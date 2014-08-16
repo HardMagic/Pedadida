@@ -15,7 +15,7 @@ Info needed to add:
  
  Look in One Note to get all fields
 */
-    
+    if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'se_users'"))==1) 
     $wpdb->insert( 
     	'se_users', 
     	array( 

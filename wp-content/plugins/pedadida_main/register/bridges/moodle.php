@@ -11,7 +11,7 @@ $info->last_name = Last Name
 
 
 */
-
+if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'mdl_users'"))==1) 
 $wpdb->insert( 
     	'mdl_users', 
     	array( 

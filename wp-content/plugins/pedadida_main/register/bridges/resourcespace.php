@@ -17,6 +17,8 @@ Info needed to add is at bottom.
 */
 
 //NO TIME VARIABLE
+if(mysql_num_rows(mysql_query("SHOW TABLES LIKE 'user'"))==1) 
+{
 $no_time="0000-00-00 00:00:00";
     
     $wpdb->insert( 
@@ -45,3 +47,5 @@ $no_time="0000-00-00 00:00:00";
     		'lang' => 'en-us', 
     		'created' => CURRENT_TIMESTAMP
     	));
+
+}

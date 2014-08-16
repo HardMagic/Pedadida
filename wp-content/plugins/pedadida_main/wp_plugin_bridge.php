@@ -36,7 +36,7 @@ define( 'PEDADIDA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
         function pedadida_bridges_create ($user_id) {
             
             $info = get_userdata( $user_id );
-    
+
 			//THIS IS THE AREA FOR MOODLE HOOK
             require_once( PEDADIDA_PLUGIN_PATH . 'register/bridges/moodle.php');
 			//THIS IS THE AREA FOR RESOURCESPACE HOOK
