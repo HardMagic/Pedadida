@@ -29,13 +29,19 @@ define( 'PEDADIDA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
     // REGISTERING AREA
         // REGISTRATION FORM CUSTOMIZATION
-        require_once( PEDADIDA_PLUGIN_PATH . 'register/registration_form.php');
+        //require_once( PEDADIDA_PLUGIN_PATH . 'register/registration_form.php');
 
 		//THIS IS THE AREA FOR WP CREATE ACCOUNT HOOK
 	    add_action('user_register', 'pedadida_bridges_create');
         function pedadida_bridges_create ($user_id) {
             
             $info = get_userdata( $user_id );
+            $wp_first_name = $info->first_name;
+            $wp_last_name = $info->last_name;
+            $wp_user_login = $info->user_login;
+            $wp_user_email = $info->user_email;
+            $wp_display_name = $wp_first_name . ' ' . $wp_last_name;
+      
 
 			//THIS IS THE AREA FOR MOODLE HOOK
             require_once( PEDADIDA_PLUGIN_PATH . 'register/bridges/moodle.php');
